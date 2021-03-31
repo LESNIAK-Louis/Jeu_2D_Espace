@@ -7,6 +7,7 @@
  */
 
 #include "sdl2-light.h"
+#include <stdio.h>
 
 
 /**
@@ -32,7 +33,7 @@
  * \brief Pas de déplacement du sprite
 */
 
-#define MOVING_STEP 5
+#define MOVING_STEP 25
 
 /**
  * \brief Représentation pour stocker les textures nécessaires à l'affichage graphique
@@ -40,7 +41,7 @@
 
 struct textures_s{
     SDL_Texture* background; /*!< Texture liée à l'image du fond de l'écran. */
-    /* A COMPLETER */
+    SDL_Texture* sprite; /*!< Texture liée à l'image du personnage. */
 };
 
 
@@ -56,8 +57,9 @@ typedef struct textures_s textures_t;
 */
 
 struct world_s{
-    int x; /*!< Champ indiquant  l'abscisse de la position du perso */
-    int y; /*!< Champ indiquant  l'ordonnée de la position du perso */
+    int sprite_x; /*!< Champ indiquant la postion x du sprite */
+    int sprite_y; /*!< Champ indiquant la postion y du sprite */
+    
     int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
 
 };
@@ -80,6 +82,8 @@ typedef struct world_s world_t;
 
 void init_data(world_t * world){
     
+    world->sprite_x = (SCREEN_WIDTH-SPRITE_SIZE)/2;
+    world->sprite_y = (SCREEN_HEIGHT-SPRITE_SIZE)/2;
     //on n'est pas à la fin du jeu
     world->gameover = 0;
     
@@ -140,9 +144,25 @@ void handle_events(SDL_Event *event,world_t *world){
        
          //si une touche est appuyée
          if(event->type == SDL_KEYDOWN){
-             //si la touche appuyée est 'D'
-             if(event->key.keysym.sym == SDLK_d){
-                 printf("La touche D est appuyée\n");
+             if(event->key.keysym.sym == SDLK_RIGHT){
+                 printf("La touche -> est appuyée\n");
+                 world->sprite_x += MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_LEFT){
+                 printf("La touche <- est appuyée\n");
+                  world->sprite_x -= MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_UP){
+                 printf("La touche up est appuyée\n");
+                  world->sprite_y -= MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_DOWN){
+                 printf("La touche down est appuyée\n");
+                  world->sprite_y += MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_ESCAPE){
+              	//On indique la fin du jeu
+           		 world->gameover = 1;
               }
          }
     }
@@ -156,7 +176,7 @@ void handle_events(SDL_Event *event,world_t *world){
 
 void clean_textures(textures_t *textures){
     clean_texture(textures->background);
-    /* A COMPLETER */
+    clean_texture(textures->sprite);
 }
 
 
@@ -170,7 +190,7 @@ void clean_textures(textures_t *textures){
 void  init_textures(SDL_Renderer *renderer, textures_t *textures){
     textures->background = load_image( "ressources/background.bmp",renderer);
     
-    /* A COMPLETER */
+    textures->sprite = load_image( "ressources/sprite.bmp",renderer);
 
     
 }
@@ -206,7 +226,7 @@ void refresh_graphics(SDL_Renderer *renderer, world_t *world,textures_t *texture
     
     //application des textures dans le renderer
     apply_background(renderer, textures);
-    /* A COMPLETER */
+    apply_texture(textures->sprite, renderer, world->sprite_x, world->sprite_y);
     
     // on met à jour l'écran
     update_screen(renderer);
@@ -250,7 +270,7 @@ void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, w
  */
 
 
-int main( int argc, char* args[] )
+int main(int argc, char* args[])
 {
     SDL_Event event;
     world_t world;
