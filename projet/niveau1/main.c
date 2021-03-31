@@ -80,10 +80,8 @@ typedef struct textures_s textures_t;
 */
 
 struct world_s{
-    /*
-      A COMPLETER
-     */
-    
+    int x; /*!< Champ indiquant  l'abscisse de la position du perso */
+    int y; /*!< Champ indiquant  l'ordonnée de la position du perso */
     int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
 
 };
@@ -94,9 +92,22 @@ struct world_s{
 
 typedef struct world_s world_t;
 
+/**
+ * \brief Représentation d'un sprite du jeu
+*/
 
+struct sprite_s {
+    int x; /*!< Champ indiquant l'abscisse de la position */
+    int y;/*!< Champ indiquant l'ordonnée de la position */
+    int h;/*!< Champ indiquant la hauteur*/
+    int w;/*!< Champ indiquant la largeur*/
+};
 
+/**
+ * \brief Type qui correspond aux données du sprite
+ */
 
+typedef struct sprite_s sprite_t;
 
 /**
  * \brief La fonction initialise les données du monde du jeu

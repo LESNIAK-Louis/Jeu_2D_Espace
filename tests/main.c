@@ -56,10 +56,8 @@ typedef struct textures_s textures_t;
 */
 
 struct world_s{
-    /*
-      A COMPLETER
-     */
-    
+    int x; /*!< Champ indiquant  l'abscisse de la position du perso */
+    int y; /*!< Champ indiquant  l'ordonnée de la position du perso */
     int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
 
 };
