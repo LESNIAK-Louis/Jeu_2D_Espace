@@ -7,6 +7,7 @@
  */
 
 #include "sdl2-light.h"
+#include <stdio.h>
 
 
 /**
@@ -56,7 +57,22 @@
 #define INITIAL_SPEED 2
 
 
+/**
+ * \brief Représentation d'un sprite du jeu
+*/
 
+struct sprite_s {
+    int x; /*!< Champ indiquant l'abscisse de la position */
+    int y; /*!< Champ indiquant l'ordonnée de la position */
+    int h; /*!< Champ indiquant la hauteur*/
+    int w; /*!< Champ indiquant la largeur*/
+};
+
+/**
+ * \brief Type qui correspond aux données du sprite
+ */
+
+typedef struct sprite_s sprite_t;
 
 /**
  * \brief Représentation pour stocker les textures nécessaires à l'affichage graphique
@@ -64,7 +80,7 @@
 
 struct textures_s{
     SDL_Texture* background; /*!< Texture liée à l'image du fond de l'écran. */
-    /* A COMPLETER */
+    SDL_Texture* sprite; /*!< Texture liée à l'image du personnage. */
 };
 
 
@@ -80,8 +96,7 @@ typedef struct textures_s textures_t;
 */
 
 struct world_s{
-    int x; /*!< Champ indiquant  l'abscisse de la position du perso */
-    int y; /*!< Champ indiquant  l'ordonnée de la position du perso */
+    sprite_t* vaisseau;  /*!< Champ réprésentant le sprite vaisseau */
     int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
 
 };
@@ -93,21 +108,54 @@ struct world_s{
 typedef struct world_s world_t;
 
 /**
- * \brief Représentation d'un sprite du jeu
-*/
+ * \brief La fonction initialise la position du sprite
+ * \param sprite vaisseau
+ * \param x abscisse de la position du sprite
+ * \param y ordonnée de la position du sprite
+ * \param w largeur de la position du sprite
+ * \param h hauteur de la position du sprite
+ */
+void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite){
+    SDL_Rect dst = {0, 0, 0, 0};
+    
+    SDL_QueryTexture(texture, NULL, NULL, &dst.w, &dst.h);
+    dst.x = sprite->x; dst.y=sprite->y;
+    
+    SDL_RenderCopy(renderer, texture, NULL, &dst);
+    
+}
 
-struct sprite_s {
-    int x; /*!< Champ indiquant l'abscisse de la position */
-    int y;/*!< Champ indiquant l'ordonnée de la position */
-    int h;/*!< Champ indiquant la hauteur*/
-    int w;/*!< Champ indiquant la largeur*/
-};
 
 /**
- * \brief Type qui correspond aux données du sprite
+ * \brief La fonction initialise la position du sprite
+ * \param sprite vaisseau
+ * \param x abscisse de la position du sprite
+ * \param y ordonnée de la position du sprite
+ * \param w largeur de la position du sprite
+ * \param h hauteur de la position du sprite
  */
 
-typedef struct sprite_s sprite_t;
+void init_sprite(sprite_t* sprite,int x,int y,int w,int h)
+{
+    sprite->x=x;
+    sprite->y=y;
+    sprite->w=w;
+    sprite->h=h;
+}
+
+
+/**
+ * \brief La fonction affiche la position du sprite
+ * \param sprite vaisseau
+ */
+
+void print_sprite(sprite_t *sprite){
+    printf("abscisse du sprite : %i\n",sprite->x);
+    printf("ordonnée du sprite : %i\n",sprite->y);
+    printf("hauteur du sprite : %i\n",sprite->h);
+    printf("largeur du sprite : %i\n",sprite->w);
+}
+
 
 /**
  * \brief La fonction initialise les données du monde du jeu
@@ -116,12 +164,14 @@ typedef struct sprite_s sprite_t;
 
 
 void init_data(world_t * world){
-    
+    world->vaisseau->x = (SCREEN_WIDTH-SHIP_SIZE)/2;
+    world->vaisseau->y = SCREEN_HEIGHT-SHIP_SIZE;
+    world->vaisseau->h = SHIP_SIZE; 
+    world->vaisseau->w = SHIP_SIZE; 
+    print_sprite(world->vaisseau);
+
     //on n'est pas à la fin du jeu
     world->gameover = 0;
-    world->y = SCREEN_HEIGHT-SHIP_SIZE;
-    world->x = SCREEN_WIDTH/2;
-   
 }
 
 
@@ -179,14 +229,29 @@ void handle_events(SDL_Event *event,world_t *world){
        
          //si une touche est appuyée
          if(event->type == SDL_KEYDOWN){
-             //si la touche appuyée est 'D'
-             if(event->key.keysym.sym == SDLK_d){
-                 printf("La touche D est appuyée\n");
+             if(event->key.keysym.sym == SDLK_RIGHT){
+                 printf("La touche -> est appuyée\n");
+                 world->vaisseau->x += MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_LEFT){
+                 printf("La touche <- est appuyée\n");
+                  world->vaisseau->x -= MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_UP){
+                 printf("La touche up est appuyée\n");
+                  world->vaisseau->y -= MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_DOWN){
+                 printf("La touche down est appuyée\n");
+                  world->vaisseau->y += MOVING_STEP;
+              }
+              else if(event->key.keysym.sym == SDLK_ESCAPE){
+                //On indique la fin du jeu
+                 world->gameover = 1;
               }
          }
     }
 }
-
 
 /**
  * \brief La fonction nettoie les textures
@@ -195,7 +260,7 @@ void handle_events(SDL_Event *event,world_t *world){
 
 void clean_textures(textures_t *textures){
     clean_texture(textures->background);
-    /* A COMPLETER */
+    clean_texture(textures->sprite);
 }
 
 
@@ -208,10 +273,7 @@ void clean_textures(textures_t *textures){
 
 void  init_textures(SDL_Renderer *renderer, textures_t *textures){
     textures->background = load_image( "ressources/space-background.bmp",renderer);
-    
-    /* A COMPLETER */
-
-    
+    textures->sprite = load_image( "ressources/sprite.bmp",renderer);
 }
 
 
@@ -245,7 +307,8 @@ void refresh_graphics(SDL_Renderer *renderer, world_t *world,textures_t *texture
     
     //application des textures dans le renderer
     apply_background(renderer, textures->background);
-    /* A COMPLETER */
+    apply_texture(textures->sprite, renderer, world->vaisseau->x, world->vaisseau->y);
+    apply_sprite(renderer, textures->sprite, world->vaisseau);
     
     // on met à jour l'écran
     update_screen(renderer);
@@ -277,35 +340,11 @@ void clean(SDL_Window *window, SDL_Renderer * renderer, textures_t *textures, wo
  * \param world le monde
  */
 
-void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world){
+void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world)
+{
     init_sdl(window,renderer,SCREEN_WIDTH, SCREEN_HEIGHT);
     init_data(world);
     init_textures(*renderer,textures);
-}
-
-/**
- * \brief La fonction initialise la position du personnage
- * \param sprite le personnage
- * \param x abscisse de la position du personnage
- * \param y ordonnée de la position du personnage
- * \param w largeur de la position du personnage
- * \param h hauteur de la position du personnage
- */
-
-void init_sprite(sprite_t* sprite,int x,int y,int w,int h){
-    sprite->x=x;
-    sprite->y=y;
-    sprite->w=w;
-    sprite->h=h;
-    
-}
-
-void print_sprite(sprite_t *sprite){
-    printf("abscisse du sprite : %i\n",sprite->x);
-    printf("ordonnée du sprite : %i\n",sprite->y);
-    printf("hauteur du sprite : %i\n",sprite->h);
-    printf("largeur du sprite : %i\n",sprite->w);
-    
 }
 
 
