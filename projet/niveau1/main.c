@@ -119,7 +119,9 @@ void init_data(world_t * world){
     
     //on n'est pas à la fin du jeu
     world->gameover = 0;
-    
+    world->y = SCREEN_HEIGHT-SHIP_SIZE;
+    world->x = SCREEN_WIDTH/2;
+   
 }
 
 
@@ -281,12 +283,35 @@ void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, w
     init_textures(*renderer,textures);
 }
 
+/**
+ * \brief La fonction initialise la position du personnage
+ * \param sprite le personnage
+ * \param x abscisse de la position du personnage
+ * \param y ordonnée de la position du personnage
+ * \param w largeur de la position du personnage
+ * \param h hauteur de la position du personnage
+ */
+
+void init_sprite(sprite_t* sprite,int x,int y,int w,int h){
+    sprite->x=x;
+    sprite->y=y;
+    sprite->w=w;
+    sprite->h=h;
+    
+}
+
+void print_sprite(sprite_t *sprite){
+    printf("abscisse du sprite : %i\n",sprite->x);
+    printf("ordonnée du sprite : %i\n",sprite->y);
+    printf("hauteur du sprite : %i\n",sprite->h);
+    printf("largeur du sprite : %i\n",sprite->w);
+    
+}
+
 
 /**
  *  \brief programme principal qui implémente la boucle du jeu
  */
-
-
 int main( int argc, char* args[] )
 {
     SDL_Event event;
