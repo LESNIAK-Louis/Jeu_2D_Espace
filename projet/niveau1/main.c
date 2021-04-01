@@ -80,7 +80,8 @@ typedef struct sprite_s sprite_t;
 
 struct textures_s{
     SDL_Texture* background; /*!< Texture liée à l'image du fond de l'écran. */
-    SDL_Texture* sprite; /*!< Texture liée à l'image du personnage. */
+    SDL_Texture* vaisseau; /*!< Texture liée à l'image du vaisseau. */
+    SDL_Texture* ligne_arrive; /*!< Texture liée à la ligne d'arrivée */
 };
 
 
@@ -96,8 +97,10 @@ typedef struct textures_s textures_t;
 */
 
 struct world_s{
-    sprite_t* vaisseau;  /*!< Champ réprésentant le sprite vaisseau */
-    int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
+  sprite_t vaisseau;  /*!< Champ réprésentant le sprite vaisseau */
+  sprite_t ligne_arrive;  /*!< Champ réprésentant la ligne d'arrivée */
+  int vy;
+  int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
 
 };
 
@@ -149,11 +152,11 @@ void init_sprite(sprite_t* sprite,int x,int y,int w,int h)
  * \param sprite vaisseau
  */
 
-void print_sprite(sprite_t *sprite){
-    printf("abscisse du sprite : %i\n",sprite->x);
-    printf("ordonnée du sprite : %i\n",sprite->y);
-    printf("hauteur du sprite : %i\n",sprite->h);
-    printf("largeur du sprite : %i\n",sprite->w);
+void print_sprite(sprite_t sprite){
+    printf("abscisse du sprite : %i\n",sprite.x);
+    printf("ordonnée du sprite : %i\n",sprite.y);
+    printf("hauteur du sprite : %i\n",sprite.h);
+    printf("largeur du sprite : %i\n",sprite.w);
 }
 
 
@@ -164,11 +167,19 @@ void print_sprite(sprite_t *sprite){
 
 
 void init_data(world_t * world){
-    world->vaisseau->x = (SCREEN_WIDTH-SHIP_SIZE)/2;
-    world->vaisseau->y = SCREEN_HEIGHT-SHIP_SIZE;
-    world->vaisseau->h = SHIP_SIZE; 
-    world->vaisseau->w = SHIP_SIZE; 
+    world->vaisseau.x = (SCREEN_WIDTH-SHIP_SIZE)/2;
+    world->vaisseau.y = SCREEN_HEIGHT-SHIP_SIZE;
+    world->vaisseau.h = SHIP_SIZE; 
+    world->vaisseau.w = SHIP_SIZE; 
     print_sprite(world->vaisseau);
+
+    world->ligne_arrive.x = 0;
+    world->ligne_arrive.y = FINISH_LINE_HEIGHT;
+    world->ligne_arrive.h = FINISH_LINE_HEIGHT; 
+    world->ligne_arrive.w = SCREEN_WIDTH; 
+    print_sprite(world->ligne_arrive);
+
+    world->vy = INITIAL_SPEED;
 
     //on n'est pas à la fin du jeu
     world->gameover = 0;
@@ -206,7 +217,7 @@ int is_game_over(world_t *world){
  */
 
 void update_data(world_t *world){
-    /* A COMPLETER */
+    world->ligne_arrive.y += world->vy;
 }
 
 
@@ -231,19 +242,19 @@ void handle_events(SDL_Event *event,world_t *world){
          if(event->type == SDL_KEYDOWN){
              if(event->key.keysym.sym == SDLK_RIGHT){
                  printf("La touche -> est appuyée\n");
-                 world->vaisseau->x += MOVING_STEP;
+                 world->vaisseau.x += MOVING_STEP;
               }
               else if(event->key.keysym.sym == SDLK_LEFT){
                  printf("La touche <- est appuyée\n");
-                  world->vaisseau->x -= MOVING_STEP;
+                  world->vaisseau.x -= MOVING_STEP;
               }
               else if(event->key.keysym.sym == SDLK_UP){
                  printf("La touche up est appuyée\n");
-                  world->vaisseau->y -= MOVING_STEP;
+                  world->vaisseau.y -= MOVING_STEP;
               }
               else if(event->key.keysym.sym == SDLK_DOWN){
                  printf("La touche down est appuyée\n");
-                  world->vaisseau->y += MOVING_STEP;
+                  world->vaisseau.y += MOVING_STEP;
               }
               else if(event->key.keysym.sym == SDLK_ESCAPE){
                 //On indique la fin du jeu
@@ -260,7 +271,9 @@ void handle_events(SDL_Event *event,world_t *world){
 
 void clean_textures(textures_t *textures){
     clean_texture(textures->background);
-    clean_texture(textures->sprite);
+
+    clean_texture(textures->vaisseau);
+    clean_texture(textures->ligne_arrive);
 }
 
 
@@ -273,7 +286,8 @@ void clean_textures(textures_t *textures){
 
 void  init_textures(SDL_Renderer *renderer, textures_t *textures){
     textures->background = load_image( "ressources/space-background.bmp",renderer);
-    textures->sprite = load_image( "ressources/sprite.bmp",renderer);
+    textures->vaisseau = load_image( "ressources/sprite.bmp",renderer);
+    textures->ligne_arrive = load_image( "ressources/finish_line.bmp",renderer);
 }
 
 
@@ -300,15 +314,16 @@ void apply_background(SDL_Renderer *renderer, SDL_Texture *texture){
  * \param textures les textures
  */
 
-void refresh_graphics(SDL_Renderer *renderer, world_t *world,textures_t *textures){
+void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textures){
     
     //on vide le renderer
     clear_renderer(renderer);
     
     //application des textures dans le renderer
     apply_background(renderer, textures->background);
-    apply_texture(textures->sprite, renderer, world->vaisseau->x, world->vaisseau->y);
-    apply_sprite(renderer, textures->sprite, world->vaisseau);
+
+    apply_sprite(renderer, textures->vaisseau, &(world->vaisseau));
+    apply_sprite(renderer, textures->ligne_arrive, &(world->ligne_arrive));
     
     // on met à jour l'écran
     update_screen(renderer);
