@@ -1,0 +1,177 @@
+\begin{theindex}
+
+  \item {apply\_background}
+    \subitem {main.c}, \hyperpage{11}
+  \item {apply\_meteorite}
+    \subitem {main.c}, \hyperpage{11}
+  \item {apply\_sprite}
+    \subitem {main.c}, \hyperpage{12}
+  \item {apply\_texture}
+    \subitem {sdl2-\/light.c}, \hyperpage{17}
+    \subitem {sdl2-\/light.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {background}
+    \subitem {textures\_s}, \hyperpage{6}
+
+  \indexspace
+
+  \item {clean}
+    \subitem {main.c}, \hyperpage{12}
+  \item {clean\_data}
+    \subitem {main.c}, \hyperpage{12}
+  \item {clean\_sdl}
+    \subitem {sdl2-\/light.c}, \hyperpage{17}
+    \subitem {sdl2-\/light.h}, \hyperpage{21}
+  \item {clean\_texture}
+    \subitem {sdl2-\/light.c}, \hyperpage{17}
+    \subitem {sdl2-\/light.h}, \hyperpage{21}
+  \item {clean\_textures}
+    \subitem {main.c}, \hyperpage{13}
+  \item {clear\_renderer}
+    \subitem {sdl2-\/light.c}, \hyperpage{18}
+    \subitem {sdl2-\/light.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {gameover}
+    \subitem {world\_s}, \hyperpage{7}
+
+  \indexspace
+
+  \item {h}
+    \subitem {sprite\_s}, \hyperpage{5}
+  \item {handle\_events}
+    \subitem {main.c}, \hyperpage{13}
+
+  \indexspace
+
+  \item {init}
+    \subitem {main.c}, \hyperpage{13}
+  \item {init\_data}
+    \subitem {main.c}, \hyperpage{14}
+  \item {init\_sdl}
+    \subitem {sdl2-\/light.c}, \hyperpage{18}
+    \subitem {sdl2-\/light.h}, \hyperpage{22}
+  \item {init\_sprite}
+    \subitem {main.c}, \hyperpage{14}
+  \item {init\_textures}
+    \subitem {main.c}, \hyperpage{14}
+  \item {is\_game\_over}
+    \subitem {main.c}, \hyperpage{15}
+
+  \indexspace
+
+  \item {ligne\_arrive}
+    \subitem {textures\_s}, \hyperpage{6}
+    \subitem {world\_s}, \hyperpage{8}
+  \item {load\_image}
+    \subitem {sdl2-\/light.c}, \hyperpage{18}
+    \subitem {sdl2-\/light.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {main.c}, \hyperpage{9}
+    \subitem {apply\_background}, \hyperpage{11}
+    \subitem {apply\_meteorite}, \hyperpage{11}
+    \subitem {apply\_sprite}, \hyperpage{12}
+    \subitem {clean}, \hyperpage{12}
+    \subitem {clean\_data}, \hyperpage{12}
+    \subitem {clean\_textures}, \hyperpage{13}
+    \subitem {handle\_events}, \hyperpage{13}
+    \subitem {init}, \hyperpage{13}
+    \subitem {init\_data}, \hyperpage{14}
+    \subitem {init\_sprite}, \hyperpage{14}
+    \subitem {init\_textures}, \hyperpage{14}
+    \subitem {is\_game\_over}, \hyperpage{15}
+    \subitem {print\_sprite}, \hyperpage{15}
+    \subitem {refresh\_graphics}, \hyperpage{15}
+    \subitem {update\_data}, \hyperpage{15}
+  \item {meteorite}
+    \subitem {textures\_s}, \hyperpage{7}
+  \item {mur}
+    \subitem {world\_s}, \hyperpage{8}
+
+  \indexspace
+
+  \item {pause}
+    \subitem {sdl2-\/light.c}, \hyperpage{19}
+    \subitem {sdl2-\/light.h}, \hyperpage{22}
+  \item {print\_sprite}
+    \subitem {main.c}, \hyperpage{15}
+
+  \indexspace
+
+  \item {refresh\_graphics}
+    \subitem {main.c}, \hyperpage{15}
+
+  \indexspace
+
+  \item {sdl2-\/light.c}, \hyperpage{16}
+    \subitem {apply\_texture}, \hyperpage{17}
+    \subitem {clean\_sdl}, \hyperpage{17}
+    \subitem {clean\_texture}, \hyperpage{17}
+    \subitem {clear\_renderer}, \hyperpage{18}
+    \subitem {init\_sdl}, \hyperpage{18}
+    \subitem {load\_image}, \hyperpage{18}
+    \subitem {pause}, \hyperpage{19}
+    \subitem {update\_screen}, \hyperpage{19}
+  \item {sdl2-\/light.h}, \hyperpage{20}
+    \subitem {apply\_texture}, \hyperpage{20}
+    \subitem {clean\_sdl}, \hyperpage{21}
+    \subitem {clean\_texture}, \hyperpage{21}
+    \subitem {clear\_renderer}, \hyperpage{21}
+    \subitem {init\_sdl}, \hyperpage{22}
+    \subitem {load\_image}, \hyperpage{22}
+    \subitem {pause}, \hyperpage{22}
+    \subitem {update\_screen}, \hyperpage{23}
+  \item {sprite\_s}, \hyperpage{5}
+    \subitem {h}, \hyperpage{5}
+    \subitem {w}, \hyperpage{5}
+    \subitem {x}, \hyperpage{5}
+    \subitem {y}, \hyperpage{6}
+
+  \indexspace
+
+  \item {textures\_s}, \hyperpage{6}
+    \subitem {background}, \hyperpage{6}
+    \subitem {ligne\_arrive}, \hyperpage{6}
+    \subitem {meteorite}, \hyperpage{7}
+    \subitem {vaisseau}, \hyperpage{7}
+
+  \indexspace
+
+  \item {update\_data}
+    \subitem {main.c}, \hyperpage{15}
+  \item {update\_screen}
+    \subitem {sdl2-\/light.c}, \hyperpage{19}
+    \subitem {sdl2-\/light.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {vaisseau}
+    \subitem {textures\_s}, \hyperpage{7}
+    \subitem {world\_s}, \hyperpage{8}
+
+  \indexspace
+
+  \item {w}
+    \subitem {sprite\_s}, \hyperpage{5}
+  \item {world\_s}, \hyperpage{7}
+    \subitem {gameover}, \hyperpage{7}
+    \subitem {ligne\_arrive}, \hyperpage{8}
+    \subitem {mur}, \hyperpage{8}
+    \subitem {vaisseau}, \hyperpage{8}
+
+  \indexspace
+
+  \item {x}
+    \subitem {sprite\_s}, \hyperpage{5}
+
+  \indexspace
+
+  \item {y}
+    \subitem {sprite\_s}, \hyperpage{6}
+
+\end{theindex}
