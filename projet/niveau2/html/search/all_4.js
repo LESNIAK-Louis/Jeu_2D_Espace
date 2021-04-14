@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gameover_12',['gameover',['../structworld__s.html#a693aa82d082fe3467969094559b9bc0f',1,'world_s']]]
+  ['finish_5fline_5fheight_16',['FINISH_LINE_HEIGHT',['../definition_8h.html#a5da0558f0bfdf2f2133fd9178aa2cec6',1,'definition.h']]]
 ];

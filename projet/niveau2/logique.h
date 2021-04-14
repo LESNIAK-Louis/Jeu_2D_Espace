@@ -1,21 +1,19 @@
-//
-//  logique.h
-//  
-//
-//  Created by Kamelia Slimani on 07/04/2021.
-//
+/**
+ * \file logique.h
+ * \brief Header du module logique
+ * \author LESNIAK Louis & SLIMANI Kamelia
+ * \version 2.0
+ * \date 14 avril 2021
+ */
+
 
 #ifndef logique_h
 #define logique_h
-#include "sdl2-light.h"
-#include <stdio.h>
-#include "graphique.h"
-#include "definition.h"
 
 
 /**
  * \brief Représentation d'un sprite du jeu
-*/
+ */
 
 struct sprite_s {
     int x; /*!< Champ indiquant l'abscisse de la position */
@@ -41,26 +39,15 @@ struct world_s{
   sprite_t mur; /*!< Champ représentant un mur de météorites */
   int vy; /*! Champ représentant les vitesse du jeu*/
   int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
-
+  int collision_mur; /*!< Champ indiquant si le vaisseau est rentré en colision avec un mur */
 };
+
 /**
  * \brief Type qui correspond aux données du monde
  */
 
 typedef struct world_s world_t;
 
-
-
-
-/**
- * \brief La fonction initialise la position du sprite
- * \param sprite vaisseau
- * \param x abscisse de la position du sprite
- * \param y ordonnée de la position du sprite
- * \param w largeur de la position du sprite
- * \param h hauteur de la position du sprite
- */
-void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite);
 
 
 /**
@@ -79,8 +66,15 @@ void init_sprite(sprite_t* sprite,int x,int y,int w,int h);
  * \param world les données du monde
  */
 
-
 void init_data(world_t * world);
+
+
+/**
+ * \brief La fonction affiche la position du sprite
+ * \param sprite vaisseau
+ */
+
+void print_sprite(sprite_t sprite);
 
 /**
  * \brief La fonction nettoie les données du monde
@@ -103,4 +97,43 @@ int is_game_over(world_t *world);
  */
 
 void update_data(world_t *world);
+
+/**
+ * \brief fonction qui verifie que le sprite ne depaase pas la limite gauche du jeu
+ * \param sprite vaisseau
+*/
+
+void depassement_g(sprite_t *sprite);
+
+/**
+ * \brief fonction qui verifie que le sprite ne depaase pas la limite droite du jeu
+ * \param sprite vaisseau
+*/
+
+void depassement_d(sprite_t *sprite);
+
+/**
+ * \brief fonction qui verifie que 2 sprite ne soit pas en collision
+ * \param sp1 vaisseau
+ * \param sp2 sprite (mur ou ligne arrivé)
+*/
+
+int sprites_collide(sprite_t *sp1, sprite_t *sp2);
+
+/**
+ * \brief fonction qui verifie que 2 sprite ne soit pas en collision
+ * \param sp1 vaisseau
+ * \param sp2 sprite (mur ou ligne arrivé)
+ * \param world monde 
+ * \param make_disappear sprite visible/invisible 
+*/
+void handle_sprites_collision(sprite_t *sp1, sprite_t *sp2, world_t *world, int make_disappear);
+
+/**
+ * \brief fonction qui retourne la valeur absolue d'un entier
+ * \param a int
+ * \return |a| : -a si a < 0 ou a si a > 0
+*/
+int abs(int a); 
+
 #endif /* logique_h */

@@ -1,0 +1,240 @@
+\hypertarget{logique_8c}{}\doxysection{logique.\+c File Reference}
+\label{logique_8c}\index{logique.c@{logique.c}}
+
+
+Module gérant la partie logique du jeu.  
+
+
+{\ttfamily \#include \char`\"{}logique.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{logique_8c_a7edf5248c9929108f571836fb92f204a}{init\+\_\+sprite}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite, int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em La fonction initialise la position du sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a5676e72ded3c1a993c4c975ef9958288}{init\+\_\+data}} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\begin{DoxyCompactList}\small\item\em La fonction initialise les données du monde du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a7b8db8816492b278f468c32b3e7f15f2}{print\+\_\+sprite}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} sprite)
+\begin{DoxyCompactList}\small\item\em La fonction affiche la position du sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_abcbee1dbb5697f9d0de3f737f9c7aafe}{clean\+\_\+data}} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\begin{DoxyCompactList}\small\item\em La fonction nettoie les données du monde. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{logique_8c_a87c51ee2e71f0707b7c964afc414f556}{is\+\_\+game\+\_\+over}} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\begin{DoxyCompactList}\small\item\em La fonction indique si le jeu est fini en fonction des données du monde. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a6c91f82a5ece8b14628159353390adf4}{update\+\_\+data}} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\begin{DoxyCompactList}\small\item\em La fonction met à jour les données en tenant compte de la physique du monde. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a9adeecd7d715bb5a4486fe4540d60999}{depassement\+\_\+g}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em fonction qui verifie que le sprite ne depaase pas la limite gauche du jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a6895221ecd14a31eb28d1970cdf9aea5}{depassement\+\_\+d}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em fonction qui verifie que le sprite ne depaase pas la limite droite du jeu \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{logique_8c_aa80441bd92270f050b0796561243f410}{abs}} (int a)
+\begin{DoxyCompactList}\small\item\em fonction qui retourne la valeur absolue d\textquotesingle{}un entier \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{logique_8c_aa35f099a7e2fcb62d60f44d7a061f151}{sprites\+\_\+collide}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sp1, \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sp2)
+\begin{DoxyCompactList}\small\item\em fonction qui verifie que 2 sprite ne soit pas en collision \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logique_8c_a4c40ffe2714a56d1d83b4b4c1646ae69}{handle\+\_\+sprites\+\_\+collision}} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sp1, \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sp2, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, int make\+\_\+disappear)
+\begin{DoxyCompactList}\small\item\em fonction qui verifie que 2 sprite ne soit pas en collision \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module gérant la partie logique du jeu. 
+
+\begin{DoxyAuthor}{Author}
+LESNIAK Louis \& SLIMANI Kamelia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 avril 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{logique_8c_aa80441bd92270f050b0796561243f410}\label{logique_8c_aa80441bd92270f050b0796561243f410}} 
+\index{logique.c@{logique.c}!abs@{abs}}
+\index{abs@{abs}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily int abs (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+
+
+fonction qui retourne la valeur absolue d\textquotesingle{}un entier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\vert$a$\vert$ \+: -\/a si a $<$ 0 ou a si a $>$ 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logique_8c_abcbee1dbb5697f9d0de3f737f9c7aafe}\label{logique_8c_abcbee1dbb5697f9d0de3f737f9c7aafe}} 
+\index{logique.c@{logique.c}!clean\_data@{clean\_data}}
+\index{clean\_data@{clean\_data}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{clean\_data()}{clean\_data()}}
+{\footnotesize\ttfamily void clean\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world }\end{DoxyParamCaption})}
+
+
+
+La fonction nettoie les données du monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & les données du monde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a6895221ecd14a31eb28d1970cdf9aea5}\label{logique_8c_a6895221ecd14a31eb28d1970cdf9aea5}} 
+\index{logique.c@{logique.c}!depassement\_d@{depassement\_d}}
+\index{depassement\_d@{depassement\_d}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{depassement\_d()}{depassement\_d()}}
+{\footnotesize\ttfamily void depassement\+\_\+d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+fonction qui verifie que le sprite ne depaase pas la limite droite du jeu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & vaisseau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a9adeecd7d715bb5a4486fe4540d60999}\label{logique_8c_a9adeecd7d715bb5a4486fe4540d60999}} 
+\index{logique.c@{logique.c}!depassement\_g@{depassement\_g}}
+\index{depassement\_g@{depassement\_g}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{depassement\_g()}{depassement\_g()}}
+{\footnotesize\ttfamily void depassement\+\_\+g (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+
+
+fonction qui verifie que le sprite ne depaase pas la limite gauche du jeu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & vaisseau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a4c40ffe2714a56d1d83b4b4c1646ae69}\label{logique_8c_a4c40ffe2714a56d1d83b4b4c1646ae69}} 
+\index{logique.c@{logique.c}!handle\_sprites\_collision@{handle\_sprites\_collision}}
+\index{handle\_sprites\_collision@{handle\_sprites\_collision}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{handle\_sprites\_collision()}{handle\_sprites\_collision()}}
+{\footnotesize\ttfamily void handle\+\_\+sprites\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sp1,  }\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sp2,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{int}]{make\+\_\+disappear }\end{DoxyParamCaption})}
+
+
+
+fonction qui verifie que 2 sprite ne soit pas en collision 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp1} & vaisseau \\
+\hline
+{\em sp2} & sprite (mur ou ligne arrivé) \\
+\hline
+{\em world} & monde \\
+\hline
+{\em make\+\_\+disappear} & sprite visible/invisible \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a5676e72ded3c1a993c4c975ef9958288}\label{logique_8c_a5676e72ded3c1a993c4c975ef9958288}} 
+\index{logique.c@{logique.c}!init\_data@{init\_data}}
+\index{init\_data@{init\_data}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{init\_data()}{init\_data()}}
+{\footnotesize\ttfamily void init\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world }\end{DoxyParamCaption})}
+
+
+
+La fonction initialise les données du monde du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & les données du monde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a7edf5248c9929108f571836fb92f204a}\label{logique_8c_a7edf5248c9929108f571836fb92f204a}} 
+\index{logique.c@{logique.c}!init\_sprite@{init\_sprite}}
+\index{init\_sprite@{init\_sprite}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{init\_sprite()}{init\_sprite()}}
+{\footnotesize\ttfamily void init\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+La fonction initialise la position du sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & vaisseau \\
+\hline
+{\em x} & abscisse de la position du sprite \\
+\hline
+{\em y} & ordonnée de la position du sprite \\
+\hline
+{\em w} & largeur de la position du sprite \\
+\hline
+{\em h} & hauteur de la position du sprite \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a87c51ee2e71f0707b7c964afc414f556}\label{logique_8c_a87c51ee2e71f0707b7c964afc414f556}} 
+\index{logique.c@{logique.c}!is\_game\_over@{is\_game\_over}}
+\index{is\_game\_over@{is\_game\_over}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{is\_game\_over()}{is\_game\_over()}}
+{\footnotesize\ttfamily int is\+\_\+game\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world }\end{DoxyParamCaption})}
+
+
+
+La fonction indique si le jeu est fini en fonction des données du monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & les données du monde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si le jeu est fini, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logique_8c_a7b8db8816492b278f468c32b3e7f15f2}\label{logique_8c_a7b8db8816492b278f468c32b3e7f15f2}} 
+\index{logique.c@{logique.c}!print\_sprite@{print\_sprite}}
+\index{print\_sprite@{print\_sprite}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{print\_sprite()}{print\_sprite()}}
+{\footnotesize\ttfamily void print\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}}}]{sprite }\end{DoxyParamCaption})}
+
+
+
+La fonction affiche la position du sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & vaisseau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_aa35f099a7e2fcb62d60f44d7a061f151}\label{logique_8c_aa35f099a7e2fcb62d60f44d7a061f151}} 
+\index{logique.c@{logique.c}!sprites\_collide@{sprites\_collide}}
+\index{sprites\_collide@{sprites\_collide}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{sprites\_collide()}{sprites\_collide()}}
+{\footnotesize\ttfamily int sprites\+\_\+collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sp1,  }\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sp2 }\end{DoxyParamCaption})}
+
+
+
+fonction qui verifie que 2 sprite ne soit pas en collision 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp1} & vaisseau \\
+\hline
+{\em sp2} & sprite (mur ou ligne arrivé) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logique_8c_a6c91f82a5ece8b14628159353390adf4}\label{logique_8c_a6c91f82a5ece8b14628159353390adf4}} 
+\index{logique.c@{logique.c}!update\_data@{update\_data}}
+\index{update\_data@{update\_data}!logique.c@{logique.c}}
+\doxysubsubsection{\texorpdfstring{update\_data()}{update\_data()}}
+{\footnotesize\ttfamily void update\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world }\end{DoxyParamCaption})}
+
+
+
+La fonction met à jour les données en tenant compte de la physique du monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em les} & données du monde \\
+\hline
+\end{DoxyParams}

@@ -1,17 +1,16 @@
-//
-//  graphique.h
-//  
-//
-//  Created by Kamelia Slimani on 07/04/2021.
-//
+/**
+ * \file graphique.h
+ * \brief Header du module graphique
+ * \author LESNIAK Louis & SLIMANI Kamelia
+ * \version 2.0
+ * \date 14 avril 2021
+ */
 
 #ifndef graphique_h
 #define graphique_h
 
 #include "sdl2-light.h"
-#include <stdio.h>
 #include "logique.h"
-#include "definition.h"
 
 
 /**
@@ -32,19 +31,6 @@ struct textures_s{
 
 typedef struct textures_s textures_t;
 
-/**
- * \brief La fonction affiche la position du sprite
- * \param sprite vaisseau
- */
-
-void print_sprite(sprite_t sprite);
-/**
- * \brief La fonction gère les évènements ayant eu lieu et qui n'ont pas encore été traités
- * \param event paramètre qui contient les événements
- * \param world les données du monde
- */
-
-void handle_events(SDL_Event *event,world_t *world);
 
 /**
  * \brief La fonction nettoie les textures
@@ -62,9 +48,21 @@ void clean_textures(textures_t *textures);
 void init_textures(SDL_Renderer *renderer, textures_t *textures);
 
 /**
+ * \brief La fonction initialise la position du sprite
+ * \param sprite vaisseau
+ * \param x abscisse de la position du sprite
+ * \param y ordonnée de la position du sprite
+ * \param w largeur de la position du sprite
+ * \param h hauteur de la position du sprite
+ */
+void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite, int make_disappear);
+
+/**
  * \brief La fonction applique la texture du fond sur le renderer lié à l'écran de jeu
  * \param renderer le renderer
  * \param texture la texture liée au fond
+ * \param sprite sprite
+ * \param make_disappear permet de faire disparaitre ou non le sprite
 */
 
 void apply_background(SDL_Renderer *renderer, SDL_Texture *texture);
@@ -75,7 +73,7 @@ void apply_background(SDL_Renderer *renderer, SDL_Texture *texture);
  * \param world les données du monde
  * \param textures les textures
 */
-void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures, int hauteur, int largeur);
+void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures);
 
 /**
  * \brief La fonction rafraichit l'écran en fonction de l'état des données du monde
@@ -85,6 +83,7 @@ void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *texture
  */
 
 void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textures);
+
 
 /**
 * \brief fonction qui nettoie le jeu: nettoyage de la partie graphique (SDL), nettoyage des textures, nettoyage des données
@@ -105,23 +104,5 @@ void clean(SDL_Window *window, SDL_Renderer * renderer, textures_t *textures, wo
  */
 
 void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world);
-/**
- * \brief fonction qui verifie que le sprite ne depaase pas la limite gauche du jeu
- * \param sprite vaisseau
-*/
-void depassement_g(sprite_t sprite);
 
-/**
- * \brief fonction qui verifie que le sprite ne depaase pas la limite droite du jeu
- * \param sprite vaisseau
-*/
-void depassement_d(sprite_t sprite);
-
-/**
- * \brief fonction qui verifie que 2 sprite ne soit pas en collision
- * \param sp1 vaisseau 2
- * \param sp2 vaisseau 2
-*/
-
-int sprites_collide(sprite_t *sp1, sprite_t *sp2);
 #endif /* graphique_h */

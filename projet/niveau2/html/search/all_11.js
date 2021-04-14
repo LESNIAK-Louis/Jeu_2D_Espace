@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_49',['y',['../structsprite__s.html#a43d3d29261de294dbdac7228dd0205f8',1,'sprite_s']]]
+  ['x_60',['x',['../structsprite__s.html#aeee37c177bf99a4c248d13ddb4eff3dc',1,'sprite_s']]]
 ];

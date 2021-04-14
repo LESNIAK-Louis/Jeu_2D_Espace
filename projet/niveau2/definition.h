@@ -1,14 +1,13 @@
-//
-//  definition.h
-//  
-//
-//  Created by Kamelia Slimani on 07/04/2021.
-//
+/**
+ * \file definition.h
+ * \brief Header regroupant toutes les constantes utiles au programme
+ * \author LESNIAK Louis & SLIMANI Kamelia
+ * \version 2.0
+ * \date 14 avril 2021
+ */
 
 #ifndef definition_h
 #define definition_h
-#include "sdl2-light.h"
-#include <stdio.h>
 
 /**
  * \brief Largeur de l'écran de jeu
