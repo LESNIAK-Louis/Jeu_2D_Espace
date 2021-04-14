@@ -124,7 +124,7 @@ void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite
     SDL_Rect dst = {0, 0, 0, 0};
     
     SDL_QueryTexture(texture, NULL, NULL, &dst.w, &dst.h);
-    dst.x = sprite->x; dst.y=sprite->y;
+    dst.x = sprite->x - sprite->w/2; dst.y=sprite->y - sprite->h/2;
     
     SDL_RenderCopy(renderer, texture, NULL, &dst);
     
@@ -176,18 +176,18 @@ void init_data(world_t * world){
     world->vaisseau.y = SCREEN_HEIGHT-world->vaisseau.h;
     print_sprite(world->vaisseau);
 
-    world->ligne_arrive.h = FINISH_LINE_HEIGHT; 
-    world->ligne_arrive.w = SCREEN_WIDTH; 
-    world->ligne_arrive.x = (SCREEN_WIDTH-world->ligne_arrive.w)/2;
+    world->ligne_arrive.h = FINISH_LINE_HEIGHT;
+    world->ligne_arrive.w = SCREEN_WIDTH;
+    world->ligne_arrive.x = SCREEN_WIDTH-(world->ligne_arrive.w)/2;
     world->ligne_arrive.y = FINISH_LINE_HEIGHT;
     print_sprite(world->ligne_arrive);
 
     world->vy = INITIAL_SPEED;
 
-    world->mur.h = 3*METEORITE_SIZE; 
-    world->mur.w = 7*METEORITE_SIZE; 
-    world->mur.x = (SCREEN_WIDTH-world->mur.w)/2;
-    world->mur.y = (SCREEN_HEIGHT-world->mur.h)/2;
+    world->mur.h = 7*METEORITE_SIZE;
+    world->mur.w = 3*METEORITE_SIZE;
+    world->mur.x = SCREEN_WIDTH/2;
+    world->mur.y = SCREEN_HEIGHT/2;
     print_sprite(world->mur);
 
     //on n'est pas à la fin du jeu
@@ -321,13 +321,13 @@ void apply_background(SDL_Renderer *renderer, SDL_Texture *texture){
  * \param world les données du monde
  * \param textures les textures
 */
-void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures, int hauteur, int largeur)
+void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures)
 {
-  for(int i=0; i < hauteur; i++) 
+  for(int i=0; i < world->mur.h/METEORITE_SIZE; i++)
     {
-      for(int j=0; j < largeur; j++) 
+      for(int j=0; j < world->mur.w/METEORITE_SIZE; j++)
       {
-        apply_texture(textures->meteorite, renderer, world->mur.x+METEORITE_SIZE*j, world->mur.y+METEORITE_SIZE*i);
+        apply_texture(textures->meteorite, renderer, (world->mur.x - world->mur.w/2)+METEORITE_SIZE*j, (world->mur.y - world->mur.h/2)+METEORITE_SIZE*i);
       }
     }
 }
@@ -350,7 +350,7 @@ void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textur
 
     apply_sprite(renderer, textures->vaisseau, &(world->vaisseau));
     apply_sprite(renderer, textures->ligne_arrive, &(world->ligne_arrive));
-    apply_meteorite(renderer, world, textures, 3, 7);
+    apply_meteorite(renderer, world, textures);
     
     // on met à jour l'écran
     update_screen(renderer);
