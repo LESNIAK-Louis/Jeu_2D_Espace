@@ -120,14 +120,10 @@ typedef struct world_s world_t;
  * \param w largeur de la position du sprite
  * \param h hauteur de la position du sprite
  */
-void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite){
-    SDL_Rect dst = {0, 0, 0, 0};
-    
-    SDL_QueryTexture(texture, NULL, NULL, &dst.w, &dst.h);
-    dst.x = sprite->x - sprite->w/2; dst.y=sprite->y - sprite->h/2;
-    
-    SDL_RenderCopy(renderer, texture, NULL, &dst);
-    
+void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite, int make_disappear) // ajout de make_disappear en paramètre afin de regrouper deux morceaux de code et de former un tout
+{
+    if (make_disappear == 0) 
+      apply_texture(texture, renderer, sprite->x - sprite->w/2, sprite->y - sprite->h/2); // Le bas à gauche de la texture commence au point (x,y) ( pour que (x,y) soit le centre de celle-ci on retire la taille du sprite/2 en x et en y)
 }
 
 
@@ -170,25 +166,14 @@ void print_sprite(sprite_t sprite){
 
 void init_data(world_t * world){
 
-    world->vaisseau.h = SHIP_SIZE; 
-    world->vaisseau.w = SHIP_SIZE; 
-    world->vaisseau.x = (SCREEN_WIDTH-world->vaisseau.w)/2;
-    world->vaisseau.y = SCREEN_HEIGHT-world->vaisseau.h;
-    print_sprite(world->vaisseau);
-
-    world->ligne_arrive.h = FINISH_LINE_HEIGHT;
-    world->ligne_arrive.w = SCREEN_WIDTH;
-    world->ligne_arrive.x = SCREEN_WIDTH-(world->ligne_arrive.w)/2;
-    world->ligne_arrive.y = FINISH_LINE_HEIGHT;
-    print_sprite(world->ligne_arrive);
+    init_sprite(&(world->vaisseau), (SCREEN_WIDTH-SHIP_SIZE)/2, SCREEN_HEIGHT-SHIP_SIZE, SHIP_SIZE, SHIP_SIZE);
+    //print_sprite(world->vaisseau);
+    init_sprite(&(world->ligne_arrive), SCREEN_WIDTH-SCREEN_WIDTH/2, FINISH_LINE_HEIGHT, SCREEN_WIDTH, FINISH_LINE_HEIGHT);
+    //print_sprite(world->ligne_arrive);
+    init_sprite(&(world->mur), SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 3*METEORITE_SIZE, 7*METEORITE_SIZE);
+    //print_sprite(world->mur);
 
     world->vy = INITIAL_SPEED;
-
-    world->mur.h = 7*METEORITE_SIZE;
-    world->mur.w = 3*METEORITE_SIZE;
-    world->mur.x = SCREEN_WIDTH/2;
-    world->mur.y = SCREEN_HEIGHT/2;
-    print_sprite(world->mur);
 
     //on n'est pas à la fin du jeu
     world->gameover = 0;
@@ -323,11 +308,11 @@ void apply_background(SDL_Renderer *renderer, SDL_Texture *texture){
 */
 void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures)
 {
-  for(int i=0; i < world->mur.h/METEORITE_SIZE; i++)
+  for(int i=0; i < world->mur.h/METEORITE_SIZE; i++) // Ligne de taille METEORITE_SIZE
     {
-      for(int j=0; j < world->mur.w/METEORITE_SIZE; j++)
+      for(int j=0; j < world->mur.w/METEORITE_SIZE; j++) // Colonne de taille METEORITE_SIZE
       {
-        apply_texture(textures->meteorite, renderer, (world->mur.x - world->mur.w/2)+METEORITE_SIZE*j, (world->mur.y - world->mur.h/2)+METEORITE_SIZE*i);
+        apply_texture(textures->meteorite, renderer, (world->mur.x - world->mur.w/2)+METEORITE_SIZE*j, (world->mur.y - world->mur.h/2)+METEORITE_SIZE*i); // On place une texture de météorite au "tableau" à l'indice (i,j) 
       }
     }
 }
