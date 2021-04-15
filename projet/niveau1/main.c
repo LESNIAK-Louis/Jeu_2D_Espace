@@ -1,9 +1,9 @@
 /**
  * \file main.c
  * \brief Programme principal initial du niveau 1
- * \author Mathieu Constant
+ * \author SLIMANI Kamelia & LESNIAK Louis
  * \version 1.0
- * \date 18 mars 2021
+ * \date 15 Avril 2021
  */
 
 #include "sdl2-light.h"
