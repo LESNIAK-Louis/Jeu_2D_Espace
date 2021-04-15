@@ -3,7 +3,7 @@
  * \brief Module gérant la partie graphique du jeu
  * \author LESNIAK Louis & SLIMANI Kamelia
  * \version 2.0
- * \date 14 avril 2021
+ * \date 15 avril 2021
  */
 
 #include "sdl2-light.h"
