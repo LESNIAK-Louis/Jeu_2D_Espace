@@ -20,55 +20,47 @@ void init_sprite(sprite_t* sprite,int x,int y,int w,int h)
     sprite->h=h;
 }
 
-void init_data(world_t * world){
-
-    world->vaisseau.h = SHIP_SIZE;
-    world->vaisseau.w = SHIP_SIZE;
-    world->vaisseau.x = (SCREEN_WIDTH-world->vaisseau.w)/2;
-    world->vaisseau.y = SCREEN_HEIGHT-world->vaisseau.h;
+void init_data(world_t * world)
+{
+    init_sprite(&(world->vaisseau), (SCREEN_WIDTH-SHIP_SIZE)/2, SCREEN_HEIGHT-SHIP_SIZE, SHIP_SIZE, SHIP_SIZE);
     //print_sprite(world->vaisseau);
-
-    world->ligne_arrive.h = FINISH_LINE_HEIGHT;
-    world->ligne_arrive.w = SCREEN_WIDTH;
-    world->ligne_arrive.x = SCREEN_WIDTH-(world->ligne_arrive.w)/2;
-    world->ligne_arrive.y = FINISH_LINE_HEIGHT;
+    init_sprite(&(world->ligne_arrive), SCREEN_WIDTH-SCREEN_WIDTH/2, FINISH_LINE_HEIGHT, SCREEN_WIDTH, FINISH_LINE_HEIGHT);
     //print_sprite(world->ligne_arrive);
+    init_sprite(&(world->mur), SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 3*METEORITE_SIZE, 7*METEORITE_SIZE);
+    //print_sprite(world->mur);
 
     world->vy = INITIAL_SPEED;
-
-    world->mur.h = 7*METEORITE_SIZE;
-    world->mur.w = 3*METEORITE_SIZE;
-    world->mur.x = SCREEN_WIDTH/2;
-    world->mur.y = SCREEN_HEIGHT/2;
-    //print_sprite(world->mur);
 
     //on n'est pas à la fin du jeu
     world->gameover = 0;
 
     //le vaisseau n'est pas entré en collision avec un mur
     world->collision_mur = 0;
-
 }
 
-void print_sprite(sprite_t sprite){
+void print_sprite(sprite_t sprite)
+{
     printf("abscisse du sprite : %i\n", sprite.x);
     printf("ordonnée du sprite : %i\n", sprite.y);
     printf("largeur du sprite : %i\n", sprite.w);
     printf("hauteur du sprite : %i\n\n", sprite.h);
 }
 
-void clean_data(world_t *world){
+void clean_data(world_t *world)
+{
     /* utile uniquement si vous avez fait de l'allocation dynamique (malloc); la fonction ici doit permettre de libérer la mémoire (free) */
 }
 
 
-int is_game_over(world_t *world){
+int is_game_over(world_t *world)
+{
     return world->gameover;
 }
 
 
 
-void update_data(world_t *world){
+void update_data(world_t *world)
+{
     world->ligne_arrive.y += world->vy;
     world->mur.y += world->vy;
     depassement_g(&(world->vaisseau));

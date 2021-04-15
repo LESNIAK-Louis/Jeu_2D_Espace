@@ -32,39 +32,30 @@ void init_textures(SDL_Renderer *renderer, textures_t *textures){
 
 void apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite, int make_disappear) // ajout de make_disappear en paramètre afin de regrouper deux morceaux de code et de former un tout
 {
-    if (make_disappear == 0)
-    {
-      SDL_Rect dst = {0, 0, 0, 0};
-      
-      SDL_QueryTexture(texture, NULL, NULL, &dst.w, &dst.h);
-      dst.x = sprite->x - sprite->w/2; dst.y=sprite->y - sprite->h/2;
-      
-      SDL_RenderCopy(renderer, texture, NULL, &dst);
-    }
-    else
-      clean_texture(texture);
-    
+    if (make_disappear == 0) 
+      apply_texture(texture, renderer, sprite->x - sprite->w/2, sprite->y - sprite->h/2); // Le bas à gauche de la texture commence au point (x,y) ( pour que (x,y) soit le centre de celle-ci on retire la taille du sprite/2 en x et en y)
 }
 
-void apply_background(SDL_Renderer *renderer, SDL_Texture *texture){
-    if(texture != NULL){
+void apply_background(SDL_Renderer *renderer, SDL_Texture *texture)
+{
+    if(texture != NULL)
       apply_texture(texture, renderer, 0, 0);
-    }
 }
 
 void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures)
 {
-  for(int i=0; i < world->mur.h/METEORITE_SIZE; i++)
+  for(int i=0; i < world->mur.h/METEORITE_SIZE; i++) // Ligne de taille METEORITE_SIZE
     {
-      for(int j=0; j < world->mur.w/METEORITE_SIZE; j++)
+      for(int j=0; j < world->mur.w/METEORITE_SIZE; j++) // Colonne de taille METEORITE_SIZE
       {
-        apply_texture(textures->meteorite, renderer, (world->mur.x - world->mur.w/2)+METEORITE_SIZE*j, (world->mur.y - world->mur.h/2)+METEORITE_SIZE*i);
+        apply_texture(textures->meteorite, renderer, (world->mur.x - world->mur.w/2)+METEORITE_SIZE*j, (world->mur.y - world->mur.h/2)+METEORITE_SIZE*i); // On place une texture de météorite au "tableau" à l'indice (i,j) 
       }
     }
 }
 
 
-void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textures){
+void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textures)
+{
     
     //on vide le renderer
     clear_renderer(renderer);
@@ -77,20 +68,4 @@ void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textur
     
     // on met à jour l'écran
     update_screen(renderer);
-}
-
-
-void clean(SDL_Window *window, SDL_Renderer * renderer, textures_t *textures, world_t * world){
-    clean_data(world);
-    clean_textures(textures);
-    clean_sdl(renderer,window);
-}
-
-
-
-void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world)
-{
-    init_sdl(window,renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-    init_data(world);
-    init_textures(*renderer,textures);
 }

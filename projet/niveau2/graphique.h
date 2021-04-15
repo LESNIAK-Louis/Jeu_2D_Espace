@@ -85,24 +85,4 @@ void apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *texture
 void refresh_graphics(SDL_Renderer *renderer, world_t *world, textures_t *textures);
 
 
-/**
-* \brief fonction qui nettoie le jeu: nettoyage de la partie graphique (SDL), nettoyage des textures, nettoyage des données
-* \param window la fenêtre du jeu
-* \param renderer le renderer
-* \param textures les textures
-* \param world le monde
-*/
-
-void clean(SDL_Window *window, SDL_Renderer * renderer, textures_t *textures, world_t * world);
-
-/**
- * \brief fonction qui initialise le jeu: initialisation de la partie graphique (SDL), chargement des textures, initialisation des données
- * \param window la fenêtre du jeu
- * \param renderer le renderer
- * \param textures les textures
- * \param world le monde
- */
-
-void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world);
-
 #endif /* graphique_h */

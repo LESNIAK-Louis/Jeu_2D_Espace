@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['abs_74',['abs',['../logique_8c.html#aa80441bd92270f050b0796561243f410',1,'abs(int a):&#160;logique.c'],['../logique_8h.html#aa80441bd92270f050b0796561243f410',1,'abs(int a):&#160;logique.c']]],
-  ['apply_5fbackground_75',['apply_background',['../graphique_8c.html#aea7db68b68a4dffee7ecefff565f988f',1,'apply_background(SDL_Renderer *renderer, SDL_Texture *texture):&#160;graphique.c'],['../graphique_8h.html#aea7db68b68a4dffee7ecefff565f988f',1,'apply_background(SDL_Renderer *renderer, SDL_Texture *texture):&#160;graphique.c']]],
-  ['apply_5fmeteorite_76',['apply_meteorite',['../graphique_8c.html#adf4a9ae5e5da0d7d730988a177954f29',1,'apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures):&#160;graphique.c'],['../graphique_8h.html#adf4a9ae5e5da0d7d730988a177954f29',1,'apply_meteorite(SDL_Renderer *renderer, world_t *world, textures_t *textures):&#160;graphique.c']]],
-  ['apply_5fsprite_77',['apply_sprite',['../graphique_8c.html#ae015d7f12fea54cc6b584fee4a460502',1,'apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite, int make_disappear):&#160;graphique.c'],['../graphique_8h.html#ae015d7f12fea54cc6b584fee4a460502',1,'apply_sprite(SDL_Renderer *renderer, SDL_Texture *texture, sprite_t *sprite, int make_disappear):&#160;graphique.c']]],
-  ['apply_5ftexture_78',['apply_texture',['../sdl2-light_8c.html#aa94de38ff23c16e13439cbe9cea15256',1,'apply_texture(SDL_Texture *texture, SDL_Renderer *renderer, int x, int y):&#160;sdl2-light.c'],['../sdl2-light_8h.html#aa94de38ff23c16e13439cbe9cea15256',1,'apply_texture(SDL_Texture *texture, SDL_Renderer *renderer, int x, int y):&#160;sdl2-light.c']]]
-];

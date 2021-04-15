@@ -34,17 +34,13 @@ void test_depassement_g_param(sprite_t *sprite)
 }
 
 void test_depassement_g() 
-{
+{  
     sprite_t sprite;
-    sprite.x=5;
-    sprite.y=4;
-    sprite.h=2;
-    sprite.w=10;
+    init_sprite(&sprite, 5, 4, 10, 2);
     test_depassement_g_param(&sprite);
-    sprite.w=9;
-    sprite.x=4;
+    init_sprite(&sprite, 4, 4, 9, 2);
     test_depassement_g_param(&sprite);
-    sprite.x=5;
+    init_sprite(&sprite, 5, 4, 9, 2);
     test_depassement_g_param(&sprite);
 }
 
@@ -61,15 +57,11 @@ void test_depassement_d_param(sprite_t *sprite)
 void test_depassement_d()
 {
     sprite_t sprite;
-    sprite.x=SCREEN_WIDTH-2;
-    sprite.y=4;
-    sprite.h=2;
-    sprite.w=10;
+    init_sprite(&sprite, SCREEN_WIDTH-2, 4, 10, 2);
     test_depassement_d_param(&sprite);
-    sprite.w=9;
-    sprite.x=SCREEN_WIDTH-4;
+    init_sprite(&sprite, SCREEN_WIDTH-4, 4, 9, 2);
     test_depassement_d_param(&sprite);
-    sprite.x=SCREEN_WIDTH-3;
+    init_sprite(&sprite, SCREEN_WIDTH-3, 4, 9, 2);
     test_depassement_d_param(&sprite);
 }
 
@@ -85,25 +77,17 @@ void test_sprites_collide_param(sprite_t *sprite1, sprite_t *sprite2)
 void test_sprites_collide()
 {
     sprite_t sprite1;
-    sprite1.x=2;
-    sprite1.y=2;
-    sprite1.h=1;
-    sprite1.w=1;
+    init_sprite(&sprite1, 2, 2, 1, 1);
 
     sprite_t sprite2;
-    sprite2.x=5;
-    sprite2.y=2;
-    sprite2.h=1;
-    sprite2.w=1;
+    init_sprite(&sprite2, 5, 2, 1, 1);
 
     test_sprites_collide_param(&sprite1, &sprite2);
 
-    sprite2.x=3;
-    sprite2.y=3;
+    init_sprite(&sprite2, 3, 3, 1, 1);
     test_sprites_collide_param(&sprite1, &sprite2);
 
-    sprite2.x=4;
-    sprite2.y=2;
+    init_sprite(&sprite2, 4, 2, 1, 1);
     test_sprites_collide_param(&sprite1, &sprite2);
 }
 
@@ -122,20 +106,13 @@ void test_handle_sprites_collision()
     world.collision_mur = 0;
 
     sprite_t sprite1;
-    sprite1.x=2;
-    sprite1.y=2;
-    sprite1.h=1;
-    sprite1.w=1;
+    init_sprite(&sprite1, 2, 2, 1, 1);
 
     sprite_t sprite2;
-
-    sprite2.x=3;
-    sprite2.y=10;
-    sprite2.h=1;
-    sprite2.w=1;
+    init_sprite(&sprite2, 3, 10, 1, 1);
 
     test_handle_sprites_collision_param(&sprite1, &sprite2, &world);
-    sprite2.y=3;
+    init_sprite(&sprite2, 3, 2, 1, 1);
     test_handle_sprites_collision_param(&sprite1, &sprite2, &world);
 }
 
