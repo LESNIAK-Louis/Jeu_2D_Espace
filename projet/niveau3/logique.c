@@ -78,41 +78,38 @@ void clean_data(world_t *world)
 
 int is_game_over(world_t *world)
 {
+ 
     return world->gameover;
 }
 
 
 
-/*void update_data(world_t *world)
+void update_data(world_t *world)
 {
     world->ligne_arrive.y += world->vy;
-    world->mur.y += world->vy;
+    //world->mur.y += world->vy;
+    update_walls(world);
     depassement_g(&(world->vaisseau));
     depassement_d(&(world->vaisseau));
+
     //print_sprite(world->vaisseau);
-    handle_sprites_collision(&(world->vaisseau), &(world->mur), world, 1);
+    
+    //handle_sprites_collision(&(world->vaisseau), &(world->mur), world, 1);
     handle_sprites_collision(&(world->vaisseau), &(world->ligne_arrive), world, 0);
+    
 }
-*/
+
 void update_walls(world_t *world)
 {   
-     world->ligne_arrive.y += world->vy;
+     
     for (int i=0; i<6; i++)
     {  
 
     world->meteorite[i].y += world->vy;
     handle_sprites_collision(&(world->vaisseau), &(world->meteorite[i]), world, 1);
+
     }
-   
 
-    depassement_g(&(world->vaisseau));
-    depassement_d(&(world->vaisseau));
-    //print_sprite(world->vaisseau);
-    
-    handle_sprites_collision(&(world->vaisseau), &(world->ligne_arrive), world, 0);
-
-
-     
      
      
 }

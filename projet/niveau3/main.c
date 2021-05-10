@@ -9,12 +9,11 @@
 
 
  
- //question5.7 pas encore faite 
+ //avanacement jusqu'à la question5.7  
 
 
 #include "sdl2-light.h"
 #include "sdl2-ttf-light.h"
-#include <SDL_ttf.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,35 +22,35 @@
 #include "definition.h"
 
 /**
-* \brief fonction qui nettoie le jeu: nettoyage de la partie graphique (SDL), nettoyage des textures, nettoyage des données
+* \brief fonction qui nettoie le jeu: nettoyage de la partie graphique (SDL), nettoyage des resources, nettoyage des données
 * \param window la fenêtre du jeu
 * \param renderer le renderer
-* \param textures les textures
+* \param resources les resources
 * \param world le monde
 */
 
 
-void clean(SDL_Window *window, SDL_Renderer * renderer, textures_t *textures, world_t * world){
+void clean(SDL_Window *window, SDL_Renderer * renderer, resources_t *resources, world_t * world){
     clean_data(world);
-    clean_textures(textures);
+    clean_resources(resources);
     clean_sdl(renderer,window);
 }
 
 
 /**
- * \brief fonction qui initialise le jeu: initialisation de la partie graphique (SDL), chargement des textures, initialisation des données
+ * \brief fonction qui initialise le jeu: initialisation de la partie graphique (SDL), chargement des resources, initialisation des données
  * \param window la fenêtre du jeu
  * \param renderer le renderer
- * \param textures les textures
+ * \param resources les resources
  * \param world le monde
  */
 
-void init(SDL_Window **window, SDL_Renderer ** renderer, textures_t *textures, world_t * world)
+void init(SDL_Window **window, SDL_Renderer ** renderer, resources_t *resources, world_t * world)
 {
     init_ttf();
     init_sdl(window,renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
     init_data(world);
-    init_textures(*renderer,textures);
+    init_resources(*renderer,resources);
 
 }
 
@@ -110,12 +109,12 @@ int main( int argc, char* args[] )
 {
     SDL_Event event;
     world_t world;
-    textures_t textures;
+    resources_t resources;
     SDL_Renderer *renderer;
     SDL_Window *window;
     
     //initialisation du jeu
-    init(&window,&renderer,&textures,&world);
+    init(&window,&renderer,&resources,&world);
   
     while(is_game_over(&world)==0){ //tant que le jeu n'est pas fini
         
@@ -124,12 +123,10 @@ int main( int argc, char* args[] )
         
        
         //mise à jour des données liée à la physique du monde
-        //update_data(&world);
+        update_data(&world);
 
-        //mise à jour des données liée au murs de météorites
-        update_walls(&world);
         //rafraichissement de l'écran
-        refresh_graphics(renderer,&world,&textures);
+        refresh_graphics(renderer,&world,&resources);
         
         // pause de 10 ms pour controler la vitesse de rafraichissement
         pause(10);
@@ -137,15 +134,21 @@ int main( int argc, char* args[] )
 
     }
    
-    if ((world.collision_mur==1)||(is_game_over(&world)==1)){
+    if (world.collision_mur!=0){
       printf("You lost!\n");
+       world.gameover=1;
     }
-   
-    printf("TEMPS ECOULÉ : %i ", SDL_GetTicks()); 
+      
+    printf("You finished in : %i ", SDL_GetTicks()/1000); 
     printf("secondes \n");
+    
+ 
+
+    
+    exit(EXIT_SUCCESS);
    
     //nettoyage final
-    clean(window,renderer,&textures,&world);
+    clean(window,renderer,&resources,&world);
     
    
     return 0;
