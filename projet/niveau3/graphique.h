@@ -2,19 +2,16 @@
  * \file graphique.h
  * \brief Header du module graphique
  * \author LESNIAK Louis & SLIMANI Kamelia
- * \version 2.0
- * \date 15 avril 2021
+ * \version 3.0
+ * \date 14 mai 2021
  */
 
 #ifndef graphique_h
 #define graphique_h
-#include "sdl2-ttf-light.h"
-#include "sdl2-light.h"
 #include "logique.h"
 
-
 /**
- * \brief Représentation pour stocker les resources nécessaires à l'affichage graphique
+ * \brief Stockage des resources nécessaires à l'affichage graphique
 */
 
 struct resources_s{
@@ -68,13 +65,6 @@ void apply_sprite(SDL_Renderer *renderer, SDL_Texture *resource, sprite_t *sprit
 
 void apply_background(SDL_Renderer *renderer, SDL_Texture *resource);
 
-/**
- * \brief La fonction applique la resource des météorites sur le mur
- * \param renderer le renderer lié à l'écran de jeu
- * \param world les données du monde
- * \param resources les resources
-*/
-void apply_meteorite(SDL_Renderer *renderer, world_t *world, resources_t *resources);
 
 /**
  * \brief La fonction applique la resource des couloirs de météorites
@@ -85,13 +75,23 @@ void apply_meteorite(SDL_Renderer *renderer, world_t *world, resources_t *resour
 void  apply_walls(SDL_Renderer *renderer, world_t *world, resources_t *resources);
 
 /**
+ * \brief La fonction affiche les textes à l'écran et gère le temps
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+*/
+void apply_texts(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game);
+
+/**
  * \brief La fonction rafraichit l'écran en fonction de l'état des données du monde
  * \param renderer le renderer lié à l'écran de jeu
  * \param world les données du monde
  * \param resources les resources
+ * \param game données du jeu
  */
 
-void refresh_graphics(SDL_Renderer *renderer, world_t *world, resources_t *resources);
+void refresh_graphics(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t * game);
 
 
 #endif /* graphique_h */

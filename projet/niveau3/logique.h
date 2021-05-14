@@ -2,15 +2,13 @@
  * \file logique.h
  * \brief Header du module logique
  * \author LESNIAK Louis & SLIMANI Kamelia
- * \version 2.0
- * \date 15 avril 2021
+ * \version 3.0
+ * \date 14 mai 2021
  */
 
 
 #ifndef logique_h
 #define logique_h
-
-
 /**
  * \brief Représentation d'un sprite du jeu
  */
@@ -23,10 +21,23 @@ struct sprite_s {
 };
 
 /**
+ * \brief Données du jeu
+ */
+
+struct gameinfo_s {
+    unsigned int time;
+};
+
+/**
  * \brief Type qui correspond aux données du sprite
  */
 
 typedef struct sprite_s sprite_t;
+
+/**
+ * \brief Type qui correspond aux données du jeu
+ */
+typedef struct gameinfo_s gameinfo_t;
 
 
 /**
@@ -41,7 +52,6 @@ struct world_s{
   int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
   int collision_mur; /*!< Champ indiquant si le vaisseau est rentré en colision avec un mur */
   sprite_t meteorite[6];/*!< Champ représentant un tableau de murs de météorites*/
-  
 };
 
 /**
@@ -49,8 +59,6 @@ struct world_s{
  */
 
 typedef struct world_s world_t;
-
-
 
 /**
  * \brief La fonction initialise la position du sprite
@@ -148,7 +156,4 @@ void handle_sprites_collision(sprite_t *sp1, sprite_t *sp2, world_t *world, int 
  * \return |a| : -a si a < 0 ou a si a > 0
 */
 int abs(int a); 
-
-
-
 #endif /* logique_h */

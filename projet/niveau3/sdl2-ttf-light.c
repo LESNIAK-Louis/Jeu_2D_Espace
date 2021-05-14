@@ -1,4 +1,4 @@
-#include <SDL_ttf.h>
+//#include <SDL_ttf.h>
 #include "sdl2-ttf-light.h"
 
 

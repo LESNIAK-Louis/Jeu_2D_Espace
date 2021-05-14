@@ -5,12 +5,12 @@ INC = sdl2-light.h definition.h logique.h
 SRC = tests.c sdl2-light.c logique.c
 OBJ = $(SRC:%.c=%.o)
 
-PROG = spacecorridor
+PROG = test
 
 %.o: %.c $(INC)
 	gcc $(CFLAGS) -c $<
 
-spacecorridor: $(OBJ)
+test: $(OBJ)
 	gcc $(CFLAGS) $(OBJ) $(LDFLAGS) -o $@
 
 doc: $(PROG)

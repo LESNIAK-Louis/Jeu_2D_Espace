@@ -2,8 +2,8 @@
  * \file definition.h
  * \brief Header regroupant toutes les constantes utiles au programme
  * \author LESNIAK Louis & SLIMANI Kamelia
- * \version 2.0
- * \date 15 avril 2021
+ * \version 3.0
+ * \date 14 mai 2021
  */
 
 #ifndef definition_h
@@ -41,6 +41,13 @@
 
 #define FINISH_LINE_HEIGHT 10
 
+/**
+ * \brief Hauteur de la ligne d'arrivée
+ */
+
+
+#define FINISH_LINE_Y_INIT -960
+
 
 /**
  * \brief Pas de déplacement horizontal du vaisseau
@@ -55,6 +62,29 @@
 
 #define INITIAL_SPEED 2
 
+/**
+  * \brief Hauteur du texte de fin de partie perdante
+*/
+
+#define TEXT_LOST_HEIGHT 90
+
+/**
+  * \brief Largeur du texte de fin de partie perdante
+*/
+
+#define TEXT__WIDTH_WIDTH 40
+
+/**
+  * \brief Hauteur du texte de fin de partie gagnante
+*/
+
+#define TEXT_WIN_HEIGHT 40
+
+/**
+  * \brief Largeur du texte de fin de partie gagnante
+*/
+
+#define TEXT_WIN_WIDTH 160
 
 
 #endif /* definition_h */
