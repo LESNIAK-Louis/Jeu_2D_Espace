@@ -84,7 +84,6 @@ void update_screen(SDL_Renderer *renderer);
  * \param time ce laps de temps en milliseconde
 */
 
-
 void pause(int time);
 
 #endif

@@ -23,74 +23,275 @@ void clean(SDL_Window *window, SDL_Renderer * renderer, resources_t *resources, 
     clean_sdl(renderer,window);
 }
 
-void init(SDL_Window **window, SDL_Renderer ** renderer, resources_t *resources, world_t * world)
+void init(SDL_Window **window, SDL_Renderer ** renderer, resources_t *resources, world_t * world, gameinfo_t *game, playerinfo_t *player)
 {
+    init_player(player);
     init_ttf();
     init_sdl(window,renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
-    init_data(world);
     init_resources(*renderer,resources);
+    
+    game->select = 0;
+    game->gamemode = 0; // On est dans le menu
 }
 
-void handle_events(SDL_Event *event,world_t *world)
+void handle_events(SDL_Event *event, world_t *world, gameinfo_t *game, playerinfo_t *player)
 {
     Uint8 *keystates;
     while( SDL_PollEvent( event ) ) 
     {
-        
-        //Si l'utilisateur a cliqué sur le X de la fenêtre
-        if( event->type == SDL_QUIT ) 
+        switch(event->type)
         {
-            world->collision_mur = 1; // On perd
-            world->gameover = 1;  //On indique la fin du jeu
-        }
-       
-        //si une touche est appuyée
-        if(event->type == SDL_KEYDOWN)
-        {
-            if(event->key.keysym.sym == SDLK_RIGHT)
-            {
-                world->vaisseau.x += MOVING_STEP;
-            }
-            else if(event->key.keysym.sym == SDLK_LEFT)
-            {
-                world->vaisseau.x -= MOVING_STEP;
-            }
-            else if(event->key.keysym.sym == SDLK_UP)
-            {
-                world->vy += 1;
-            }
-            else if(event->key.keysym.sym == SDLK_DOWN)
-            {
-                if (world->vy > 1) // Plus de difficulté
-                    world->vy -= 1;
-            }
-            else if(event->key.keysym.sym == SDLK_ESCAPE)
-            {
-                world->collision_mur = 1; // On perd
-                world->gameover = 1; // Le jeu est fini
-            }
+            case SDL_QUIT : //Si l'utilisateur a cliqué sur le X de la fenêtre
+                world->collision_wall = 1; // On perd
+                world->gameover = 1;  //On indique la fin du jeu
+                game->close = 1; // On demande la fermeture de l'application
+                break;
+            case SDL_KEYDOWN :  // Si une touche est appuyée
+
+                if(game->gamemode == 1) // On est en cours de jeu
+                {
+                    switch (event->key.keysym.sym)
+                    {
+                        case SDLK_RIGHT :
+                            world->ship.x += MOVING_STEP;
+                            break;
+                        case SDLK_LEFT :
+                            world->ship.x -= MOVING_STEP;
+                            break;
+                        case SDLK_UP :
+                            world->vy += 1;
+                            break;
+                        case SDLK_DOWN :
+                            if (world->vy > 1) // Plus de difficulté
+                                world->vy -= 1;
+                            break;
+                        case SDLK_SPACE :
+                            break;
+                        default:
+                        break;
+                    }
+                }
+                else // On est dans le menu
+                {
+                    switch (event->key.keysym.sym)
+                    {
+                        case SDLK_UP :
+                            if (game->select > 0)
+                                game->select -= 1;
+                            break;
+                        case SDLK_DOWN :
+                            if (game->select < 3)
+                                game->select += 1;
+                            break;
+                        case SDLK_SPACE :
+                            if(game->gamemode == 0)
+                            {
+                                if (game->select == 0) // On commence le jeu
+                                {
+                                     init_data(world);
+                                     game->startTime=SDL_GetTicks();
+                                     game->finishTime=0;
+                                }
+
+                                game->gamemode = game->select+1;
+                                game->select = 0;
+                            }
+                            else if(game->gamemode == 2)
+                                buy_select_ship(player, game->select);
+                            break;
+                        case SDLK_ESCAPE : 
+                                if(game->gamemode != 0)
+                                {
+                                    game->select = game->gamemode-1;
+                                    game->gamemode = 0; // On est dans le menu
+                                }
+                                else
+                                    game->close = 1;
+                            break;
+                        default:
+                        break;
+                    }
+                }
+                break;
+            default:
+            break;
         }
     }
 }
 
-void save_score(world_t world, gameinfo_t game)
+char* concat_array_playername(playerinfo_t *player, char *array, unsigned int arraySize)
 {
-    if(world.collision_mur == 0)
-    {
-        char Name[50]; // On définit à 50 le nombre de caractères maximal au nom du joueur
-        printf("*Score Saver*\n");
-        printf("Enter your name (<50 char) : ");
-        if (fgets(Name, sizeof(Name), stdin) != NULL)
-        {
-            FILE *fptr;   
-            fptr= fopen("Score","a");
-            if (fptr != NULL) 
-            {
-                fprintf(fptr, "%us- ", game.time/1000);
-                fprintf(fptr, "%s", Name);
-            }
+    char *Concat = malloc(arraySize*sizeof(char) + strlen(player->name)*sizeof(char)); // On alloue la mémoire nécessaire
+    strcpy(Concat, array);
+    for(int i = 0; i < strlen(player->name)-1; i++) // On copie tout les éléments de player_name à la suite de Concat sauf le retour de ligne imposé par le fgets() à la position  player->name[strlen(player->name)-1]
+        Concat[arraySize+i] = player->name[i]; 
+    return Concat;
+}
 
+void save_score(world_t *world, gameinfo_t *game, playerinfo_t *player)
+{
+    if(world->gameover == 1 && game->gamemode == 1)
+    {
+        if (world->collision_finish_line == 1 && game->finishTime < TIME_LIMIT) // partie gagnée
+        {
+            if (player->stars < STARS_LIMIT) // ajout étoile(s) gagné(s)
+                player->stars += STARS_GAME_WON;
+
+            // Sauvegarde du score
+            FILE *fptr;   
+            char* Concat = concat_array_playername(player, "Score_", strlen("Score_"));
+            fptr= fopen(Concat,"a");
+            free(Concat);
+            if (fptr != NULL) 
+                fprintf(fptr, ": %us \n",game->finishTime);
             fclose(fptr);
+            player->lastTime = game->finishTime;
+            if (player->lastTime < player->bestTime)
+                player->bestTime = player->lastTime;
         }
+        pause(2000); // Pause de 2000ms = 2sec après la détection de fin de jeu
+    }
+}
+
+void save_info(playerinfo_t *player)
+{
+    FILE *userInfoptr;
+    char* Concat = concat_array_playername(player, "userInfo_", strlen("userInfo_"));
+    userInfoptr= fopen(Concat,"w");
+    free(Concat);
+    if (userInfoptr != NULL) 
+    {
+        fprintf(userInfoptr, "$t%us ", player->stars);
+        for(int i = 0; i<4; i++)
+            fprintf(userInfoptr, "\n$%d%us ",i, player->hasShip[i]);
+        fprintf(userInfoptr, "\n$t%us ", player->selectedShip);
+    }
+    fclose(userInfoptr);
+}
+
+unsigned int formatted_charArray_to_uint(char *Array)
+{
+    unsigned int index_s;
+    for(index_s = 0; Array[index_s]!= 's'; index_s++); // on regarde à quel index se trouve 's' (+1)
+    char *Value = malloc(index_s*sizeof(char));  // On alloue la mémoire nécessaire
+    for(int i = 2; i < index_s; i++) 
+        Value[i-2] = Array[i];
+
+    Value[index_s] = '\0'; // fin de lecture pour atoi()
+    unsigned int uintValue = atoi(Value);
+    free(Value);
+    return uintValue;
+}
+
+void init_player(playerinfo_t *player)
+{
+    // Nom du joueur
+    char Name[MAX_LENGTH_NAME]; // On définit à 50 le nombre de caractères maximal au nom du joueur
+    printf("*SpaceCorridor*\n");
+    printf("Enter your name (<%u char) : ", MAX_LENGTH_NAME);
+    if(!fgets(player->name, sizeof(player->name)*sizeof(char), stdin))
+        exit(1);
+
+    // Informations sur le joueur : précédents scores
+    FILE *fptr;   
+    
+    char* Score = concat_array_playername(player, "Score_", strlen("Score_"));
+    fptr= fopen(Score,"r");
+    free(Score);
+    if (fptr != NULL) // déjà joué auparavant
+    {
+        // Dernier temps
+        char ligne[MAX_LENGTH_NAME+TIME_LIMIT+4]; // On met en place un buffer pour pouvoir lire les document textes
+        player->bestTime = TIME_LIMIT+1;
+
+        while(fgets(ligne, sizeof(ligne), fptr)!=NULL) // Pour chaque ligne du document
+        {
+            unsigned int Temps = formatted_charArray_to_uint(ligne);
+            if (Temps < player->bestTime) // On converti le string en unsigned int
+                player->bestTime = Temps;
+        } 
+        player->lastTime = formatted_charArray_to_uint(ligne);
+        fclose(fptr);
+    }
+    else // jamais joué auparavant ou fichier supprimé
+    {
+        player->lastTime = TIME_LIMIT+1;
+        player->bestTime = TIME_LIMIT+1;
+    }
+    // étoiles et textures achetés : 
+
+    char infoLigne[50];
+    FILE *userConfigptr;  
+    char* userConfig = concat_array_playername(player, "userInfo_", strlen("userInfo_"));
+    userConfigptr = fopen(userConfig, "r");
+    free(userConfig);
+    if (userConfigptr != NULL) // déjà joué auparavant
+    {
+        for(int i = 0; i<6; i++) // Pour chaque ligne du document
+        {
+            if(fgets(infoLigne, sizeof(infoLigne), userConfigptr) != NULL) 
+            {
+                if (i == 0)
+                    player->stars = formatted_charArray_to_uint(infoLigne);
+                else if ( i == 5)
+                    player->selectedShip = formatted_charArray_to_uint(infoLigne);
+                else
+                    player->hasShip[i-1] = formatted_charArray_to_uint(infoLigne);
+            }
+        }
+        fclose(userConfigptr);
+    }      
+    else // jamais joué auparavant ou fichier supprimé
+    {
+        player->hasShip[0] = 1;
+        player->hasShip[1] = 0;
+        player->hasShip[2] = 0;
+        player->hasShip[3] = 0;
+        player->stars = 0;
+    }
+}
+
+void buy_select_ship(playerinfo_t *player, unsigned int ShipNumber)
+{
+    switch (ShipNumber)
+    {
+        case 0: 
+            if (player->stars >= PRICE_SHIP_1 && player->hasShip[0] == 0)
+            {
+                player->stars-=PRICE_SHIP_1;
+                player->hasShip[0] = 1;
+            }
+            else if (player->hasShip[0] == 1)
+                player->selectedShip = 1;
+        break;
+        case 1: 
+            if (player->stars >= PRICE_SHIP_2 && player->hasShip[1] == 0)
+            {
+                player->stars-=PRICE_SHIP_2;
+                player->hasShip[1] = 1;
+            }
+            else if (player->hasShip[1] == 1)
+                player->selectedShip = 2;
+        break;
+        case 2: 
+            if (player->stars >= PRICE_SHIP_3 && player->hasShip[2] == 0)
+            {
+                player->stars-=PRICE_SHIP_3;
+                player->hasShip[2] = 1;
+            }
+            else if (player->hasShip[2] == 1)
+                player->selectedShip = 3;
+        break;
+        case 3: 
+            if (player->stars >= PRICE_SHIP_4 && player->hasShip[3] == 0)
+            {
+                player->stars-=PRICE_SHIP_4;
+                player->hasShip[3] = 1;
+            }
+            else if (player->hasShip[3] == 1)
+                player->selectedShip = 4;
+        break;
+        default:
+        break;
     }
 }

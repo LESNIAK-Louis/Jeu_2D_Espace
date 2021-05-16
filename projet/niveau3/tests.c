@@ -104,9 +104,9 @@ void test_sprites_collide()
 
 void test_handle_sprites_collision_param(sprite_t *sp1, sprite_t *sp2, world_t *world)
 {
-    printf("Vitesse Avant : %d | Valeur world.collision_mur : %d\n", world->vy, world->collision_mur);
+    printf("Vitesse Avant : %d | Valeur world.collision_wall : %d\n", world->vy, world->collision_wall);
     handle_sprites_collision(sp1, sp2, world, 1);
-    printf("Vitesse Après : %d | Valeur world.collision_mur : %d\n", world->vy, world->collision_mur);
+    printf("Vitesse Après : %d | Valeur world.collision_wall : %d\n", world->vy, world->collision_wall);
 }
 
 void test_handle_sprites_collision()
@@ -114,7 +114,7 @@ void test_handle_sprites_collision()
     printf("\n**** test_handle_sprites_collision ****\n\n");
     world_t world;
     world.vy = 15;
-    world.collision_mur = 0;
+    world.collision_wall = 0;
 
     sprite_t sprite1;
     init_sprite(&sprite1, 2, 2, 1, 1);

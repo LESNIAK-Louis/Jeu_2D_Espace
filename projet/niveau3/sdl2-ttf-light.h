@@ -29,9 +29,12 @@ TTF_Font * load_font(const char* path, int font_size);
  * \param h sa hauteur
  * \param text le texte à afficher
  * \param font la police
+ * \param red couleur police
+ * \param green couleur police
+ * \param blue couleur police
 */
 
-void apply_text(SDL_Renderer *renderer,int x, int y, int w, int h, const char *text, TTF_Font *font);
+void apply_text(SDL_Renderer *renderer,int x, int y, int w, int h, const char *text, TTF_Font *font, int red, int green, int blue);
 
 
 

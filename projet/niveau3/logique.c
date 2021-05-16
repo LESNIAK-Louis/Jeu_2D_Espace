@@ -41,12 +41,13 @@ void init_data(world_t * world)
     //le mur de meteorites
     init_walls(world);
 
-    init_sprite(&(world->vaisseau), (SCREEN_WIDTH-SHIP_SIZE)/2, SCREEN_HEIGHT-SHIP_SIZE, SHIP_SIZE, SHIP_SIZE);
-    init_sprite(&(world->ligne_arrive), SCREEN_WIDTH-SCREEN_WIDTH/2, FINISH_LINE_Y_INIT, SCREEN_WIDTH, FINISH_LINE_HEIGHT);
+    init_sprite(&(world->ship), (SCREEN_WIDTH-SHIP_SIZE)/2, SCREEN_HEIGHT-SHIP_SIZE, SHIP_SIZE, SHIP_SIZE);
+    init_sprite(&(world->finish_line), SCREEN_WIDTH-SCREEN_WIDTH/2, FINISH_LINE_Y_INIT, SCREEN_WIDTH, FINISH_LINE_HEIGHT);
 
     world->vy = INITIAL_SPEED;
-    world->gameover = 0; // Le jeu n'est pas fini.
-    world->collision_mur = 0; // Le vaisseau n'est pas entré en collision avec un mur.
+    world->gameover = 0; // On commence le jeu
+    world->collision_wall = 0; // Le vaisseau n'est pas entré en collision avec un mur.
+    world->collision_finish_line = 0; // Le vaisseau n'est pas entré en collision avec la ligne d'arrivé.
 }
 
 void print_sprite(sprite_t sprite)
@@ -62,21 +63,29 @@ void clean_data(world_t *world)
     /* utile uniquement si vous avez fait de l'allocation dynamique (malloc); la fonction ici doit permettre de libérer la mémoire (free) */
 }
 
-int is_game_over(world_t *world)
+int is_game_over(world_t *world, gameinfo_t *game)
 {
- 
-    return world->gameover;
+    return game->close == 1;
 }
 
-void update_data(world_t *world)
+void update_data(world_t *world, gameinfo_t *game)
 {
-    world->ligne_arrive.y += world->vy;
+    if (game->gamemode == 1)
+    {
+        if(world->gameover == 1)
+            game->gamemode = 0;
+        
+        if(game->finishTime >= TIME_LIMIT)
+            world->gameover = 1;
 
-    update_walls(world);
-    depassement_g(&(world->vaisseau));
-    depassement_d(&(world->vaisseau));
-    
-    handle_sprites_collision(&(world->vaisseau), &(world->ligne_arrive), world, 0);
+        world->finish_line.y += world->vy;
+
+        update_walls(world);
+        depassement_g(&(world->ship));
+        depassement_d(&(world->ship));
+        
+        handle_sprites_collision(&(world->ship), &(world->finish_line), world, 0);
+    }
 }
 
 void update_walls(world_t *world)
@@ -84,7 +93,7 @@ void update_walls(world_t *world)
     for (int i=0; i<6; i++)
     {  
         world->meteorite[i].y += world->vy;
-        handle_sprites_collision(&(world->vaisseau), &(world->meteorite[i]), world, 1);
+        handle_sprites_collision(&(world->ship), &(world->meteorite[i]), world, 1);
     }
 }
 
@@ -129,13 +138,20 @@ int sprites_collide(sprite_t *sp1, sprite_t *sp2)
     return 0;
 }
 
-void handle_sprites_collision(sprite_t *sp1, sprite_t *sp2, world_t *world, int make_disappear)
+void handle_sprites_collision(sprite_t *sp1, sprite_t *sp2, world_t *world, int sprite_type)
 {
     if(sprites_collide(sp1, sp2)==1)
     {   
         world->vy=0;
-        if(make_disappear!=0)
-            world->collision_mur=1;
-        world->gameover=1;    
+        if (sprite_type==0) // type du sprite est ligne d'arrivé
+        {
+            world->collision_finish_line = 1;
+            world->gameover=1;  
+        }
+        else if(sprite_type==1) // type du sprite est wall
+        {
+            world->collision_wall=1;
+            world->gameover=1;  
+        } 
     }
 }

@@ -9,6 +9,7 @@
 
 #ifndef logique_h
 #define logique_h
+
 /**
  * \brief Représentation d'un sprite du jeu
  */
@@ -21,11 +22,29 @@ struct sprite_s {
 };
 
 /**
- * \brief Données du jeu
- */
+ * \brief Stockage des informations du jeu en cours (extension)
+*/
 
-struct gameinfo_s {
-    unsigned int time;
+struct gameinfo_s{
+    unsigned int startTime; /*!< Temps du début de partie */
+    unsigned int finishTime; /*!< Temps de fin de partie */
+    unsigned int gamemode; /*!< Mode du jeu en cours */
+    unsigned int close; /*!< Gère la demande de fermeture du jeu */
+    unsigned int select; /*!< Gère la sélection du menu */
+    unsigned int enter; /*!< Gère l'entrée dans une section du menu */
+};
+
+/**
+ * \brief Stockage des informations du joueur(extension)
+*/
+
+struct playerinfo_s{
+    char name[50]; /*!< Nom du joueur */
+    unsigned int stars; /*!< Nombre d'étoiles du joueur */
+    unsigned int bestTime; /*!< Meilleur temps du joueur */
+    unsigned int lastTime; /*!< Dernier temps effectué par le joueur */
+    unsigned int hasShip[4]; /*!< Indique si le joueur possède déjà la texture du vaisseau i */
+    unsigned int selectedShip; /*!< Indique la texture du vaisseau à utiliser en jeu */
 };
 
 /**
@@ -39,18 +58,24 @@ typedef struct sprite_s sprite_t;
  */
 typedef struct gameinfo_s gameinfo_t;
 
+/**
+ * \brief Type qui correspond aux données du joueur
+ */
+
+typedef struct playerinfo_s playerinfo_t;
+
 
 /**
  * \brief Représentation du monde du jeu
 */
 
 struct world_s{
-  sprite_t vaisseau;  /*!< Champ représentant le sprite vaisseau */
-  sprite_t ligne_arrive;  /*!< Champ représentant la ligne d'arrivée */
-  //sprite_t mur; /*!< Champ représentant un mur de météorites */
+  sprite_t ship;  /*!< Champ représentant le sprite vaisseau */
+  sprite_t finish_line;  /*!< Champ représentant la ligne d'arrivée */
   int vy; /*! Champ représentant les vitesse du jeu*/
   int gameover; /*!< Champ indiquant si l'on est à la fin du jeu */
-  int collision_mur; /*!< Champ indiquant si le vaisseau est rentré en colision avec un mur */
+  int collision_wall; /*!< Champ indiquant si le vaisseau est rentré en colision avec un mur */
+  int collision_finish_line; /*!< Champ indiquant si le vaisseau est rentré en colision avec la ligne d'arrivé */
   sprite_t meteorite[6];/*!< Champ représentant un tableau de murs de météorites*/
 };
 
@@ -101,17 +126,19 @@ void clean_data(world_t *world);
 /**
  * \brief La fonction indique si le jeu est fini en fonction des données du monde
  * \param world les données du monde
+ * \param game les données du jeu
  * \return 1 si le jeu est fini, 0 sinon
  */
 
-int is_game_over(world_t *world);
+int is_game_over(world_t *world, gameinfo_t *game);
 
 /**
  * \brief La fonction met à jour les données en tenant compte de la physique du monde
- * \param les données du monde
+ * \param world les données du monde
+ * \param game les données du jeu
  */
 
-void update_data(world_t *world);
+void update_data(world_t *world, gameinfo_t *game);
 
 /**
  * \brief La fonction met à jour les données des murs 

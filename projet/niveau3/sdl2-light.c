@@ -52,6 +52,7 @@ SDL_Texture *load_image(const char path[], SDL_Renderer *renderer)
 }
 
 
+
 void apply_texture(SDL_Texture *texture,SDL_Renderer *renderer,int x, int y){
     SDL_Rect dst = {0, 0, 0, 0};
     
@@ -96,3 +97,4 @@ void clean_sdl(SDL_Renderer *renderer,SDL_Window *window){
         SDL_DestroyWindow(window);
     SDL_Quit();    
 }
+

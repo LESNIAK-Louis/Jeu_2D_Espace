@@ -15,11 +15,22 @@
 */
 
 struct resources_s{
-    SDL_Texture* background; /*!< resource liée à l'image du fond de l'écran. */
-    SDL_Texture* vaisseau; /*!< resource liée à l'image du vaisseau. */
-    SDL_Texture* ligne_arrive; /*!< resource liée à la ligne d'arrivée */
+    SDL_Texture* background_menu; /*!< resource liée à l'image du fond du menu. */
+    SDL_Texture* background; /*!< resource liée à l'image du fond de l'écran de jeu. */
+    SDL_Texture* ship; /*!< resource liée à l'image du vaisseau de base. */
+    SDL_Texture* ship1; /*!< resource liée à l'image du vaisseau 1. */
+    SDL_Texture* ship2; /*!< resource liée à l'image du vaisseau 2. */
+    SDL_Texture* ship3; /*!< resource liée à l'image du vaisseau 3. */
+    SDL_Texture* ship4; /*!< resource liée à l'image du vaisseau 4. */
+    SDL_Texture* finish_line; /*!< resource liée à la ligne d'arrivée */
     SDL_Texture* meteorite; /*!< resource liée à une météorite */
-   	TTF_Font * font;/*!< font liée à la police d'affichage */
+   	TTF_Font * font;/*!< font liée à la police d'affichage du jeu */
+    TTF_Font * font_menu; /*!< font liée à la police d'affichage du menu */
+    SDL_Texture* heart; /*!< resource liée à un coeur */
+    SDL_Texture* star; /*!< resource liée à une étoile  */
+    SDL_Texture* return_menu; /*!< resource liée au retour dans le menu */
+    SDL_Texture* select; /*!< resource liée à la sélection dans le menu */
+    SDL_Texture* selected; /*!< resource liée au vaisseau selectionné dans le shop */
 };
 
 
@@ -89,9 +100,64 @@ void apply_texts(SDL_Renderer *renderer, world_t *world, resources_t *resources,
  * \param world les données du monde
  * \param resources les resources
  * \param game données du jeu
+* \param player données du joueur
  */
 
-void refresh_graphics(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t * game);
+void refresh_graphics(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t * game, playerinfo_t *player);
+
+/**
+ * \brief La fonction affiche le menu principal
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+ * \param player données du joueur
+ */
+
+void menu_main(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player);
+
+/**
+ * \brief La fonction affiche le magasin
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+ */
+
+void menu_shop(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player);
+
+/**
+ * \brief La fonction affiche les règles du jeu
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+ * \param player données du joueur
+ */
+
+void menu_rules(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game);
+
+
+/**
+ * \brief La fonction affiche les crédits du jeu
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+ */
+
+void menu_credits(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game);
+
+/**
+ * \brief La fonction affiche gère l'appel des fonctions relatives au menu
+ * \param renderer le renderer lié à l'écran de jeu
+ * \param world les données du monde
+ * \param resources les resources
+ * \param game données du jeu
+ * \param player données du joueur
+ */
+
+void apply_menu(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player);
 
 
 #endif /* graphique_h */

@@ -20,38 +20,35 @@ int main( int argc, char* args[] )
     SDL_Event event;
     world_t world;
     gameinfo_t game;
+    playerinfo_t player;
     resources_t resources;
     SDL_Renderer *renderer;
     SDL_Window *window;
     
     //initialisation du jeu
-    init(&window,&renderer,&resources,&world);
-    unsigned int startTime = SDL_GetTicks();
+    init(&window,&renderer,&resources,&world, &game, &player);
   
-    while(is_game_over(&world)==0)
-    { //tant que le jeu n'est pas fini
-        
+    while(!is_game_over(&world, &game)) //tant qu'on utlise l'application le jeu n'est pas fini
+    { 
         //gestion des évènements
-        handle_events(&event,&world);
+        handle_events(&event, &world, &game, &player);
         
-       
         //mise à jour des données liée à la physique du monde
-        update_data(&world);
+        update_data(&world, &game);
 
         //rafraichissement de l'écran
-        refresh_graphics(renderer,&world,&resources, &game);
-        
+        refresh_graphics(renderer,&world,&resources, &game, &player);
+
+        //sauvegarde du score (extension)
+        save_score(&world, &game, &player);
+            
         // pause de 10 ms pour controler la vitesse de rafraichissement
         pause(10);
     }
-
-    pause(2000); // Pause de 2000ms = 2sec après la détection de fin de partie
+    save_info(&player);
 
     //nettoyage final
     clean(window,renderer,&resources,&world,&game);
-
-    //sauvegarde du score (extension)
-    save_score(world, game);
    
     return 0;
 }
