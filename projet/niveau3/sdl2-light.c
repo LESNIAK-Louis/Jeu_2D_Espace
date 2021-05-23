@@ -1,9 +1,9 @@
 /**
  * \file sdl2-light.c
- * \brief sur-couche de SDL2 pour simplifier son utilisation pour le projet
- * \author Mathieu Constant
- * \version 0.2
- * \date 10 mars 2021
+ * \brief sur-couche de SDL2 pour simplifier son utilisation pour le projet (modifié)
+ * \author LESNIAK Louis & SLIMANI Kamelia (modification du document de CONSTANT Mathieu)
+ * \version 3.0 + extensions
+ * \date 23 mai 2021
 */
 
 #include "sdl2-light.h"

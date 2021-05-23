@@ -24,7 +24,7 @@
  * \brief Taille d'un vaisseau
  */
 
-#define SHIP_SIZE 32
+#define SPRITE_SIZE 32
 
 
 /**
@@ -33,6 +33,38 @@
 
 #define METEORITE_SIZE 32
 
+/**
+ * \brief Taille de l'espacement maximal entre deux murs de météorites
+*/
+
+#define HOLE_MAX 2
+
+/**
+ * \brief Taille de l'espacement maximal entre deux murs de météorites
+*/
+
+#define SPACE_BETWEEN_WALLS 150
+
+/**
+ * \brief Nombre de murs
+*/
+
+
+#define NB_WALLS (-FINISH_LINE_Y_INIT/(SPACE_BETWEEN_WALLS*2))*2 // Varie en fonction de la distance à parcourir
+
+/**
+ * \brief Nombre de bonus
+*/
+
+
+#define NB_BONUS NB_WALLS/2/4 // Varie en fonction de la distance à parcourir
+
+/**
+ * \brief Nombre de type de bonus
+*/
+
+
+#define NB_BONUS_TYPE 3
 
 /**
  * \brief Hauteur de la ligne d'arrivée
@@ -42,18 +74,18 @@
 #define FINISH_LINE_HEIGHT 10
 
 /**
- * \brief Hauteur de la ligne d'arrivée
+ * \brief Distance à parcourir pour atteindre la ligne d'arrivée
  */
 
 
-#define FINISH_LINE_Y_INIT -960
+#define FINISH_LINE_Y_INIT -3220 // Valeur changeable
 
 
 /**
  * \brief Pas de déplacement horizontal du vaisseau
 */
 
-#define MOVING_STEP 10
+#define MOVING_STEP METEORITE_SIZE/4
 
 
 /**
@@ -61,6 +93,12 @@
 */
 
 #define INITIAL_SPEED 2
+
+/**
+  * \brief Vitesse maximale de déplacement vertical des éléments du jeu
+*/
+
+#define SPEED_MAX 5
 
 /**
   * \brief Hauteur du texte de fin de partie perdante
@@ -98,6 +136,13 @@
 */
 
 #define TEXT_MENU_HIGHT 40
+
+/**
+  * \brief Largeur du texte dans la catégorie "rules"
+*/
+
+#define TEXT_RULES_WIDTH 150
+
 
 /**
   * \brief Largeur du texte dans le shop
@@ -139,7 +184,7 @@
   * \brief Limite de temps (en secondes)
 */
 
-#define TIME_LIMIT 10
+#define TIME_LIMIT -FINISH_LINE_Y_INIT/(70*INITIAL_SPEED) + 10 // On estime que l'on parcours 70 de distance en vitesse 1 et on ajoute 5 secondes de battement
 
 /**
   * \brief Limite longueur nom utilisateur
@@ -151,11 +196,31 @@
   * \brief Nombre d'étoiles gagnés lors d'une victoire
 */
 
-#define STARS_GAME_WON 1
+#define STARS_GAME_WON 3
+
 /**
-  * \brief Limite du nombre d'étoiles gagnable
+  * \brief Limite du nombre d'étoiles à posséder
 */
 
 #define STARS_LIMIT 999
+
+/**
+  * \brief Maximum de tir à l'écran
+*/
+
+#define MISSILE_MAX 5
+
+/**
+  * \brief Maximum d'ennemis
+*/
+
+#define ENNEMIES_MAX NB_WALLS/2
+
+/**
+  * \brief Temps à retirer lorsqu'on récupère un bonus temps
+*/
+
+#define TIME_BONUS 3000 // 3 secondes
+
 
 #endif /* definition_h */

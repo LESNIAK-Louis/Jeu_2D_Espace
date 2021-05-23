@@ -1,3 +1,11 @@
+/**
+ * \file sdl2-ttf-light.h
+ * \brief sur-couche de SDL2_ttf pour simplifier son utilisation pour le projet (modifié)
+ * \author LESNIAK Louis & SLIMANI Kamelia (modification du document de CONSTANT Mathieu)
+ * \version 3.0 + extensions
+ * \date 23 mai 2021
+*/
+
 #ifndef __SDL2_TTF_LIGHT__H
 #define __SDL2_TTF_LIGHT__H
 

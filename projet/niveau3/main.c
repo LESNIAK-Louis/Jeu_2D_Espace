@@ -1,9 +1,9 @@
 /**
  * \file main.c
- * \brief Programme principal initial du niveau 2
+ * \brief Programme principal initial du niveau 3 + extensions
  * \author LESNIAK Louis & SLIMANI Kamelia
- * \version 3.0
- * \date 14 mai 2021
+ * \version 3.0 + extensions
+ * \date 23 mai 2021
  */
 #include "sdl2-light.h"
 #include "sdl2-ttf-light.h"
@@ -34,7 +34,7 @@ int main( int argc, char* args[] )
         handle_events(&event, &world, &game, &player);
         
         //mise à jour des données liée à la physique du monde
-        update_data(&world, &game);
+        update_data(&world, &game, &player);
 
         //rafraichissement de l'écran
         refresh_graphics(renderer,&world,&resources, &game, &player);
@@ -45,7 +45,8 @@ int main( int argc, char* args[] )
         // pause de 10 ms pour controler la vitesse de rafraichissement
         pause(10);
     }
-    save_info(&player);
+    
+    save_info(&player); //  Sauvegarde des informations du joueur
 
     //nettoyage final
     clean(window,renderer,&resources,&world,&game);

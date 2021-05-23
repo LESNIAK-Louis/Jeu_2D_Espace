@@ -1,8 +1,8 @@
 CFLAGS = -O3 `sdl2-config --cflags`
 LDFLAGS = `sdl2-config --libs` -lSDL2_ttf -lm
 
-INC = sdl2-light.h definition.h logique.h
-SRC = tests.c sdl2-light.c logique.c
+INC = definition.h logique.h
+SRC = tests.c logique.c
 OBJ = $(SRC:%.c=%.o)
 
 PROG = test

@@ -1,17 +1,18 @@
-//#include <SDL_ttf.h>
+/**
+ * \file sdl2-ttf-light.c
+ * \brief sur-couche de SDL2_ttf pour simplifier son utilisation pour le projet (modifié)
+ * \author LESNIAK Louis & SLIMANI Kamelia (modification du document de CONSTANT Mathieu)
+ * \version 3.0 + extensions
+ * \date 23 mai 2021
+*/
+
 #include "sdl2-ttf-light.h"
-
-
-
-
 
 void init_ttf(){
     if(TTF_Init()==-1) {
         printf("TTF_Init: %s\n", TTF_GetError());
     }
 }
-
-
 
 TTF_Font * load_font(const char *path, int font_size){
     TTF_Font *font = TTF_OpenFont(path, font_size);
@@ -20,10 +21,6 @@ TTF_Font * load_font(const char *path, int font_size){
     }
     return font;
 }
-
-
-
-
 
 void apply_text(SDL_Renderer *renderer,int x, int y, int w, int h, const char *text, TTF_Font *font, int red, int green, int blue){
     SDL_Color color = { red, green, blue };
