@@ -1,0 +1,248 @@
+\hypertarget{graphique_8c}{}\doxysection{graphique.\+c File Reference}
+\label{graphique_8c}\index{graphique.c@{graphique.c}}
+
+
+Module gérant la partie graphique du jeu.  
+
+
+{\ttfamily \#include \char`\"{}sdl2-\/light.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sdl2-\/ttf-\/light.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transition.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphique.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logique.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for graphique.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphique_8c_a7f1b983d12511cd39a0f27ce6c974f12}{clean\+\_\+resources}} (\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction nettoie les ressources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a578c2ed9d7b39170ec23a453e4635966}{init\+\_\+resources}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction initialise les ressources nécessaires à l\textquotesingle{}affichage graphique du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a1629c377556eb836f7ab90d354d2afd1}{apply\+\_\+sprite}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, S\+D\+L\+\_\+\+Texture $\ast$resource, \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite, unsigned int make\+\_\+disappear)
+\begin{DoxyCompactList}\small\item\em La fonction positionne la texture à la position du sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a526a310375b2bc4b9fcd571655200c6e}{apply\+\_\+background}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, S\+D\+L\+\_\+\+Texture $\ast$resource)
+\begin{DoxyCompactList}\small\item\em La fonction applique la ressource du fond. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a7dfa8509d4ee0239f992775acd18a758}{apply\+\_\+walls}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction applique la ressource des couloirs de météorites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_ac95873453c6da403c90ef7ecb0ac61ef}{apply\+\_\+missiles}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction applique la ressource aux différents missiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a69cec73053b0b5e3b3cb0dc50a22fb8b}{apply\+\_\+ennemies}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction applique la ressource aux différents ennemis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a2f5a1f72a8d1efa16280169e5acb4a0c}{apply\+\_\+bonus}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources)
+\begin{DoxyCompactList}\small\item\em La fonction applique la ressource aux différents bonus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_aa8913ea2049c864c7116c0d57fececc4}{apply\+\_\+texts}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources, \mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} $\ast$game)
+\begin{DoxyCompactList}\small\item\em La fonction affiche les textes à l\textquotesingle{}écran et gère le temps. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphique_8c_a1b27e87461580907f2d99eb6edf91606}{refresh\+\_\+graphics}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$resources, \mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} $\ast$game, \mbox{\hyperlink{logique_8h_ac974d9f59f408a135788ce681901efa1}{playerinfo\+\_\+t}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em La fonction rafraichit l\textquotesingle{}écran en fonction de l\textquotesingle{}état des données du monde. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module gérant la partie graphique du jeu. 
+
+\begin{DoxyAuthor}{Author}
+L\+E\+S\+N\+I\+AK Louis \& S\+L\+I\+M\+A\+NI Kamelia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 + extensions 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23 mai 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphique_8c_a526a310375b2bc4b9fcd571655200c6e}\label{graphique_8c_a526a310375b2bc4b9fcd571655200c6e}} 
+\index{graphique.c@{graphique.c}!apply\_background@{apply\_background}}
+\index{apply\_background@{apply\_background}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_background()}{apply\_background()}}
+{\footnotesize\ttfamily void apply\+\_\+background (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{resource }\end{DoxyParamCaption})}
+
+
+
+La fonction applique la ressource du fond. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer S\+DL \\
+\hline
+{\em resource} & la ressource liée au fond \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a2f5a1f72a8d1efa16280169e5acb4a0c}\label{graphique_8c_a2f5a1f72a8d1efa16280169e5acb4a0c}} 
+\index{graphique.c@{graphique.c}!apply\_bonus@{apply\_bonus}}
+\index{apply\_bonus@{apply\_bonus}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_bonus()}{apply\_bonus()}}
+{\footnotesize\ttfamily void apply\+\_\+bonus (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction applique la ressource aux différents bonus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer lié à l\textquotesingle{}écran de jeu \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a69cec73053b0b5e3b3cb0dc50a22fb8b}\label{graphique_8c_a69cec73053b0b5e3b3cb0dc50a22fb8b}} 
+\index{graphique.c@{graphique.c}!apply\_ennemies@{apply\_ennemies}}
+\index{apply\_ennemies@{apply\_ennemies}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_ennemies()}{apply\_ennemies()}}
+{\footnotesize\ttfamily void apply\+\_\+ennemies (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction applique la ressource aux différents ennemis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer lié à l\textquotesingle{}écran de jeu \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_ac95873453c6da403c90ef7ecb0ac61ef}\label{graphique_8c_ac95873453c6da403c90ef7ecb0ac61ef}} 
+\index{graphique.c@{graphique.c}!apply\_missiles@{apply\_missiles}}
+\index{apply\_missiles@{apply\_missiles}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_missiles()}{apply\_missiles()}}
+{\footnotesize\ttfamily void apply\+\_\+missiles (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction applique la ressource aux différents missiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer lié à l\textquotesingle{}écran de jeu \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a1629c377556eb836f7ab90d354d2afd1}\label{graphique_8c_a1629c377556eb836f7ab90d354d2afd1}} 
+\index{graphique.c@{graphique.c}!apply\_sprite@{apply\_sprite}}
+\index{apply\_sprite@{apply\_sprite}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_sprite()}{apply\_sprite()}}
+{\footnotesize\ttfamily void apply\+\_\+sprite (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{resource,  }\item[{\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$}]{sprite,  }\item[{unsigned int}]{make\+\_\+disappear }\end{DoxyParamCaption})}
+
+
+
+La fonction positionne la texture à la position du sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer S\+DL \\
+\hline
+{\em resource} & les ressources du jeu \\
+\hline
+{\em sprite} & sprite à afficher \\
+\hline
+{\em make\+\_\+disappear} & affiche ou non la texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_aa8913ea2049c864c7116c0d57fececc4}\label{graphique_8c_aa8913ea2049c864c7116c0d57fececc4}} 
+\index{graphique.c@{graphique.c}!apply\_texts@{apply\_texts}}
+\index{apply\_texts@{apply\_texts}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_texts()}{apply\_texts()}}
+{\footnotesize\ttfamily void apply\+\_\+texts (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources,  }\item[{\mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+La fonction affiche les textes à l\textquotesingle{}écran et gère le temps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer S\+DL \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+{\em game} & les données du jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a7dfa8509d4ee0239f992775acd18a758}\label{graphique_8c_a7dfa8509d4ee0239f992775acd18a758}} 
+\index{graphique.c@{graphique.c}!apply\_walls@{apply\_walls}}
+\index{apply\_walls@{apply\_walls}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{apply\_walls()}{apply\_walls()}}
+{\footnotesize\ttfamily void apply\+\_\+walls (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction applique la ressource des couloirs de météorites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer S\+DL \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a7f1b983d12511cd39a0f27ce6c974f12}\label{graphique_8c_a7f1b983d12511cd39a0f27ce6c974f12}} 
+\index{graphique.c@{graphique.c}!clean\_resources@{clean\_resources}}
+\index{clean\_resources@{clean\_resources}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{clean\_resources()}{clean\_resources()}}
+{\footnotesize\ttfamily void clean\+\_\+resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction nettoie les ressources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resources} & les ressources \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a578c2ed9d7b39170ec23a453e4635966}\label{graphique_8c_a578c2ed9d7b39170ec23a453e4635966}} 
+\index{graphique.c@{graphique.c}!init\_resources@{init\_resources}}
+\index{init\_resources@{init\_resources}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{init\_resources()}{init\_resources()}}
+{\footnotesize\ttfamily void init\+\_\+resources (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources }\end{DoxyParamCaption})}
+
+
+
+La fonction initialise les ressources nécessaires à l\textquotesingle{}affichage graphique du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer S\+DL \\
+\hline
+{\em resources} & les ressources du jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graphique_8c_a1b27e87461580907f2d99eb6edf91606}\label{graphique_8c_a1b27e87461580907f2d99eb6edf91606}} 
+\index{graphique.c@{graphique.c}!refresh\_graphics@{refresh\_graphics}}
+\index{refresh\_graphics@{refresh\_graphics}!graphique.c@{graphique.c}}
+\doxysubsubsection{\texorpdfstring{refresh\_graphics()}{refresh\_graphics()}}
+{\footnotesize\ttfamily void refresh\+\_\+graphics (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$}]{world,  }\item[{\mbox{\hyperlink{graphique_8h_a44d2bd8dccad474d265e4696b1685b06}{resources\+\_\+t}} $\ast$}]{resources,  }\item[{\mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{logique_8h_ac974d9f59f408a135788ce681901efa1}{playerinfo\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+La fonction rafraichit l\textquotesingle{}écran en fonction de l\textquotesingle{}état des données du monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & renderer S\+DL \\
+\hline
+{\em world} & les données du monde \\
+\hline
+{\em resources} & les ressources \\
+\hline
+{\em game} & données du jeu \\
+\hline
+{\em player} & données du joueur \\
+\hline
+\end{DoxyParams}

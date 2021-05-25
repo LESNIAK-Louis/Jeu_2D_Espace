@@ -1,0 +1,493 @@
+\begin{theindex}
+
+  \item {abs}
+    \subitem {logique.c}, \hyperpage{26}
+    \subitem {logique.h}, \hyperpage{33}
+  \item {apply\_background}
+    \subitem {graphique.c}, \hyperpage{16}
+    \subitem {graphique.h}, \hyperpage{21}
+  \item {apply\_bonus}
+    \subitem {graphique.c}, \hyperpage{16}
+    \subitem {graphique.h}, \hyperpage{21}
+  \item {apply\_ennemies}
+    \subitem {graphique.c}, \hyperpage{17}
+    \subitem {graphique.h}, \hyperpage{22}
+  \item {apply\_menu}
+    \subitem {menu.c}, \hyperpage{40}
+    \subitem {menu.h}, \hyperpage{44}
+  \item {apply\_missiles}
+    \subitem {graphique.c}, \hyperpage{17}
+    \subitem {graphique.h}, \hyperpage{22}
+  \item {apply\_sprite}
+    \subitem {graphique.c}, \hyperpage{18}
+    \subitem {graphique.h}, \hyperpage{22}
+  \item {apply\_text}
+    \subitem {sdl2-\/ttf-\/light.c}, \hyperpage{56}
+    \subitem {sdl2-\/ttf-\/light.h}, \hyperpage{58}
+  \item {apply\_texts}
+    \subitem {graphique.c}, \hyperpage{18}
+    \subitem {graphique.h}, \hyperpage{23}
+  \item {apply\_texture}
+    \subitem {sdl2-\/light.c}, \hyperpage{48}
+    \subitem {sdl2-\/light.h}, \hyperpage{52}
+  \item {apply\_walls}
+    \subitem {graphique.c}, \hyperpage{18}
+    \subitem {graphique.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {background}
+    \subitem {resources\_s}, \hyperpage{8}
+  \item {background\_menu}
+    \subitem {resources\_s}, \hyperpage{8}
+  \item {bestTime}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+  \item {bonus}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {bonus\_type}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {buy\_select\_ship}
+    \subitem {menu.c}, \hyperpage{41}
+    \subitem {menu.h}, \hyperpage{45}
+
+  \indexspace
+
+  \item {clean}
+    \subitem {transition.c}, \hyperpage{61}
+    \subitem {transition.h}, \hyperpage{65}
+  \item {clean\_font}
+    \subitem {sdl2-\/ttf-\/light.c}, \hyperpage{56}
+    \subitem {sdl2-\/ttf-\/light.h}, \hyperpage{58}
+  \item {clean\_resources}
+    \subitem {graphique.c}, \hyperpage{19}
+    \subitem {graphique.h}, \hyperpage{23}
+  \item {clean\_sdl}
+    \subitem {sdl2-\/light.c}, \hyperpage{49}
+    \subitem {sdl2-\/light.h}, \hyperpage{53}
+  \item {clean\_texture}
+    \subitem {sdl2-\/light.c}, \hyperpage{49}
+    \subitem {sdl2-\/light.h}, \hyperpage{53}
+  \item {clear\_renderer}
+    \subitem {sdl2-\/light.c}, \hyperpage{49}
+    \subitem {sdl2-\/light.h}, \hyperpage{53}
+  \item {close}
+    \subitem {gameinfo\_s}, \hyperpage{5}
+  \item {collision}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {collision\_finish\_line}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {concat\_array\_playername}
+    \subitem {transition.c}, \hyperpage{61}
+    \subitem {transition.h}, \hyperpage{65}
+
+  \indexspace
+
+  \item {definition.h}, \hyperpage{15}
+  \item {depassement\_d}
+    \subitem {logique.c}, \hyperpage{26}
+    \subitem {logique.h}, \hyperpage{33}
+  \item {depassement\_g}
+    \subitem {logique.c}, \hyperpage{26}
+    \subitem {logique.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {ennemy}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {ennemy\_ship}
+    \subitem {resources\_s}, \hyperpage{8}
+  \item {enter}
+    \subitem {gameinfo\_s}, \hyperpage{5}
+
+  \indexspace
+
+  \item {finish\_line}
+    \subitem {resources\_s}, \hyperpage{9}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {finishTime}
+    \subitem {gameinfo\_s}, \hyperpage{6}
+  \item {font}
+    \subitem {resources\_s}, \hyperpage{9}
+  \item {font\_menu}
+    \subitem {resources\_s}, \hyperpage{9}
+  \item {formatted\_charArray\_to\_uint}
+    \subitem {transition.c}, \hyperpage{62}
+    \subitem {transition.h}, \hyperpage{66}
+
+  \indexspace
+
+  \item {gameinfo\_s}, \hyperpage{5}
+    \subitem {close}, \hyperpage{5}
+    \subitem {enter}, \hyperpage{5}
+    \subitem {finishTime}, \hyperpage{6}
+    \subitem {gamemode}, \hyperpage{6}
+    \subitem {select}, \hyperpage{6}
+    \subitem {startTime}, \hyperpage{6}
+  \item {gamemode}
+    \subitem {gameinfo\_s}, \hyperpage{6}
+  \item {gameover}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {graphique.c}, \hyperpage{15}
+    \subitem {apply\_background}, \hyperpage{16}
+    \subitem {apply\_bonus}, \hyperpage{16}
+    \subitem {apply\_ennemies}, \hyperpage{17}
+    \subitem {apply\_missiles}, \hyperpage{17}
+    \subitem {apply\_sprite}, \hyperpage{18}
+    \subitem {apply\_texts}, \hyperpage{18}
+    \subitem {apply\_walls}, \hyperpage{18}
+    \subitem {clean\_resources}, \hyperpage{19}
+    \subitem {init\_resources}, \hyperpage{19}
+    \subitem {refresh\_graphics}, \hyperpage{19}
+  \item {graphique.h}, \hyperpage{20}
+    \subitem {apply\_background}, \hyperpage{21}
+    \subitem {apply\_bonus}, \hyperpage{21}
+    \subitem {apply\_ennemies}, \hyperpage{22}
+    \subitem {apply\_missiles}, \hyperpage{22}
+    \subitem {apply\_sprite}, \hyperpage{22}
+    \subitem {apply\_texts}, \hyperpage{23}
+    \subitem {apply\_walls}, \hyperpage{23}
+    \subitem {clean\_resources}, \hyperpage{23}
+    \subitem {init\_resources}, \hyperpage{24}
+    \subitem {refresh\_graphics}, \hyperpage{24}
+
+  \indexspace
+
+  \item {h}
+    \subitem {sprite\_s}, \hyperpage{11}
+  \item {handle\_events}
+    \subitem {transition.c}, \hyperpage{62}
+    \subitem {transition.h}, \hyperpage{66}
+  \item {handle\_sprites\_collision}
+    \subitem {logique.c}, \hyperpage{26}
+    \subitem {logique.h}, \hyperpage{34}
+  \item {hasShield}
+    \subitem {world\_s}, \hyperpage{13}
+  \item {hasShip}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+
+  \indexspace
+
+  \item {init}
+    \subitem {transition.c}, \hyperpage{62}
+    \subitem {transition.h}, \hyperpage{66}
+  \item {init\_bonus}
+    \subitem {logique.c}, \hyperpage{27}
+    \subitem {logique.h}, \hyperpage{34}
+  \item {init\_data}
+    \subitem {logique.c}, \hyperpage{27}
+    \subitem {logique.h}, \hyperpage{35}
+  \item {init\_ennemies}
+    \subitem {logique.c}, \hyperpage{27}
+    \subitem {logique.h}, \hyperpage{35}
+  \item {init\_missiles}
+    \subitem {logique.c}, \hyperpage{28}
+    \subitem {logique.h}, \hyperpage{35}
+  \item {init\_player}
+    \subitem {transition.c}, \hyperpage{63}
+    \subitem {transition.h}, \hyperpage{67}
+  \item {init\_resources}
+    \subitem {graphique.c}, \hyperpage{19}
+    \subitem {graphique.h}, \hyperpage{24}
+  \item {init\_sdl}
+    \subitem {sdl2-\/light.c}, \hyperpage{50}
+    \subitem {sdl2-\/light.h}, \hyperpage{53}
+  \item {init\_sprite}
+    \subitem {logique.c}, \hyperpage{28}
+    \subitem {logique.h}, \hyperpage{35}
+  \item {init\_walls}
+    \subitem {logique.c}, \hyperpage{28}
+    \subitem {logique.h}, \hyperpage{36}
+  \item {is\_bonus\_available}
+    \subitem {world\_s}, \hyperpage{14}
+  \item {is\_ennemy\_dead}
+    \subitem {world\_s}, \hyperpage{14}
+  \item {is\_game\_over}
+    \subitem {logique.c}, \hyperpage{29}
+    \subitem {logique.h}, \hyperpage{36}
+  \item {is\_missile\_free}
+    \subitem {world\_s}, \hyperpage{14}
+
+  \indexspace
+
+  \item {lastTime}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+  \item {load\_font}
+    \subitem {sdl2-\/ttf-\/light.c}, \hyperpage{56}
+    \subitem {sdl2-\/ttf-\/light.h}, \hyperpage{58}
+  \item {load\_image}
+    \subitem {sdl2-\/light.c}, \hyperpage{50}
+    \subitem {sdl2-\/light.h}, \hyperpage{54}
+  \item {logique.c}, \hyperpage{24}
+    \subitem {abs}, \hyperpage{26}
+    \subitem {depassement\_d}, \hyperpage{26}
+    \subitem {depassement\_g}, \hyperpage{26}
+    \subitem {handle\_sprites\_collision}, \hyperpage{26}
+    \subitem {init\_bonus}, \hyperpage{27}
+    \subitem {init\_data}, \hyperpage{27}
+    \subitem {init\_ennemies}, \hyperpage{27}
+    \subitem {init\_missiles}, \hyperpage{28}
+    \subitem {init\_sprite}, \hyperpage{28}
+    \subitem {init\_walls}, \hyperpage{28}
+    \subitem {is\_game\_over}, \hyperpage{29}
+    \subitem {print\_sprite}, \hyperpage{29}
+    \subitem {retreive\_index}, \hyperpage{29}
+    \subitem {shoot}, \hyperpage{30}
+    \subitem {sprites\_collide}, \hyperpage{30}
+    \subitem {update\_data}, \hyperpage{30}
+    \subitem {update\_sprites}, \hyperpage{31}
+  \item {logique.h}, \hyperpage{31}
+    \subitem {abs}, \hyperpage{33}
+    \subitem {depassement\_d}, \hyperpage{33}
+    \subitem {depassement\_g}, \hyperpage{34}
+    \subitem {handle\_sprites\_collision}, \hyperpage{34}
+    \subitem {init\_bonus}, \hyperpage{34}
+    \subitem {init\_data}, \hyperpage{35}
+    \subitem {init\_ennemies}, \hyperpage{35}
+    \subitem {init\_missiles}, \hyperpage{35}
+    \subitem {init\_sprite}, \hyperpage{35}
+    \subitem {init\_walls}, \hyperpage{36}
+    \subitem {is\_game\_over}, \hyperpage{36}
+    \subitem {print\_sprite}, \hyperpage{36}
+    \subitem {retreive\_index}, \hyperpage{37}
+    \subitem {shoot}, \hyperpage{37}
+    \subitem {sprites\_collide}, \hyperpage{37}
+    \subitem {update\_data}, \hyperpage{38}
+    \subitem {update\_sprites}, \hyperpage{38}
+
+  \indexspace
+
+  \item {main.c}, \hyperpage{39}
+  \item {menu.c}, \hyperpage{39}
+    \subitem {apply\_menu}, \hyperpage{40}
+    \subitem {buy\_select\_ship}, \hyperpage{41}
+    \subitem {menu\_credits}, \hyperpage{41}
+    \subitem {menu\_infos}, \hyperpage{41}
+    \subitem {menu\_main}, \hyperpage{42}
+    \subitem {menu\_shop}, \hyperpage{42}
+    \subitem {print\_select}, \hyperpage{43}
+    \subitem {print\_stars}, \hyperpage{43}
+  \item {menu.h}, \hyperpage{44}
+    \subitem {apply\_menu}, \hyperpage{44}
+    \subitem {buy\_select\_ship}, \hyperpage{45}
+    \subitem {menu\_credits}, \hyperpage{45}
+    \subitem {menu\_infos}, \hyperpage{46}
+    \subitem {menu\_main}, \hyperpage{46}
+    \subitem {menu\_shop}, \hyperpage{46}
+    \subitem {print\_select}, \hyperpage{47}
+    \subitem {print\_stars}, \hyperpage{47}
+  \item {menu\_credits}
+    \subitem {menu.c}, \hyperpage{41}
+    \subitem {menu.h}, \hyperpage{45}
+  \item {menu\_infos}
+    \subitem {menu.c}, \hyperpage{41}
+    \subitem {menu.h}, \hyperpage{46}
+  \item {menu\_main}
+    \subitem {menu.c}, \hyperpage{42}
+    \subitem {menu.h}, \hyperpage{46}
+  \item {menu\_shop}
+    \subitem {menu.c}, \hyperpage{42}
+    \subitem {menu.h}, \hyperpage{46}
+  \item {meteorite}
+    \subitem {resources\_s}, \hyperpage{9}
+    \subitem {world\_s}, \hyperpage{14}
+  \item {missile}
+    \subitem {resources\_s}, \hyperpage{9}
+    \subitem {world\_s}, \hyperpage{14}
+
+  \indexspace
+
+  \item {name}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+
+  \indexspace
+
+  \item {pause}
+    \subitem {sdl2-\/light.c}, \hyperpage{51}
+    \subitem {sdl2-\/light.h}, \hyperpage{54}
+  \item {playerinfo\_s}, \hyperpage{6}
+    \subitem {bestTime}, \hyperpage{7}
+    \subitem {hasShip}, \hyperpage{7}
+    \subitem {lastTime}, \hyperpage{7}
+    \subitem {name}, \hyperpage{7}
+    \subitem {selectedShip}, \hyperpage{7}
+    \subitem {stars}, \hyperpage{7}
+  \item {print\_select}
+    \subitem {menu.c}, \hyperpage{43}
+    \subitem {menu.h}, \hyperpage{47}
+  \item {print\_sprite}
+    \subitem {logique.c}, \hyperpage{29}
+    \subitem {logique.h}, \hyperpage{36}
+  \item {print\_stars}
+    \subitem {menu.c}, \hyperpage{43}
+    \subitem {menu.h}, \hyperpage{47}
+
+  \indexspace
+
+  \item {refresh\_graphics}
+    \subitem {graphique.c}, \hyperpage{19}
+    \subitem {graphique.h}, \hyperpage{24}
+  \item {resources\_s}, \hyperpage{8}
+    \subitem {background}, \hyperpage{8}
+    \subitem {background\_menu}, \hyperpage{8}
+    \subitem {ennemy\_ship}, \hyperpage{8}
+    \subitem {finish\_line}, \hyperpage{9}
+    \subitem {font}, \hyperpage{9}
+    \subitem {font\_menu}, \hyperpage{9}
+    \subitem {meteorite}, \hyperpage{9}
+    \subitem {missile}, \hyperpage{9}
+    \subitem {return\_menu}, \hyperpage{9}
+    \subitem {select}, \hyperpage{9}
+    \subitem {selected}, \hyperpage{9}
+    \subitem {shield}, \hyperpage{10}
+    \subitem {ship}, \hyperpage{10}
+    \subitem {ship1}, \hyperpage{10}
+    \subitem {ship2}, \hyperpage{10}
+    \subitem {ship3}, \hyperpage{10}
+    \subitem {ship4}, \hyperpage{10}
+    \subitem {star}, \hyperpage{10}
+    \subitem {time}, \hyperpage{10}
+  \item {retreive\_index}
+    \subitem {logique.c}, \hyperpage{29}
+    \subitem {logique.h}, \hyperpage{37}
+  \item {return\_menu}
+    \subitem {resources\_s}, \hyperpage{9}
+
+  \indexspace
+
+  \item {save\_info}
+    \subitem {transition.c}, \hyperpage{63}
+    \subitem {transition.h}, \hyperpage{67}
+  \item {save\_score}
+    \subitem {transition.c}, \hyperpage{63}
+    \subitem {transition.h}, \hyperpage{67}
+  \item {sdl2-\/light.c}, \hyperpage{48}
+    \subitem {apply\_texture}, \hyperpage{48}
+    \subitem {clean\_sdl}, \hyperpage{49}
+    \subitem {clean\_texture}, \hyperpage{49}
+    \subitem {clear\_renderer}, \hyperpage{49}
+    \subitem {init\_sdl}, \hyperpage{50}
+    \subitem {load\_image}, \hyperpage{50}
+    \subitem {pause}, \hyperpage{51}
+    \subitem {update\_screen}, \hyperpage{51}
+  \item {sdl2-\/light.h}, \hyperpage{51}
+    \subitem {apply\_texture}, \hyperpage{52}
+    \subitem {clean\_sdl}, \hyperpage{53}
+    \subitem {clean\_texture}, \hyperpage{53}
+    \subitem {clear\_renderer}, \hyperpage{53}
+    \subitem {init\_sdl}, \hyperpage{53}
+    \subitem {load\_image}, \hyperpage{54}
+    \subitem {pause}, \hyperpage{54}
+    \subitem {update\_screen}, \hyperpage{55}
+  \item {sdl2-\/ttf-\/light.c}, \hyperpage{55}
+    \subitem {apply\_text}, \hyperpage{56}
+    \subitem {clean\_font}, \hyperpage{56}
+    \subitem {load\_font}, \hyperpage{56}
+  \item {sdl2-\/ttf-\/light.h}, \hyperpage{57}
+    \subitem {apply\_text}, \hyperpage{58}
+    \subitem {clean\_font}, \hyperpage{58}
+    \subitem {load\_font}, \hyperpage{58}
+  \item {select}
+    \subitem {gameinfo\_s}, \hyperpage{6}
+    \subitem {resources\_s}, \hyperpage{9}
+  \item {selected}
+    \subitem {resources\_s}, \hyperpage{9}
+  \item {selectedShip}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+  \item {shield}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {ship}
+    \subitem {resources\_s}, \hyperpage{10}
+    \subitem {world\_s}, \hyperpage{14}
+  \item {ship1}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {ship2}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {ship3}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {ship4}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {shoot}
+    \subitem {logique.c}, \hyperpage{30}
+    \subitem {logique.h}, \hyperpage{37}
+  \item {sprite\_s}, \hyperpage{11}
+    \subitem {h}, \hyperpage{11}
+    \subitem {w}, \hyperpage{11}
+    \subitem {x}, \hyperpage{11}
+    \subitem {y}, \hyperpage{12}
+  \item {sprites\_collide}
+    \subitem {logique.c}, \hyperpage{30}
+    \subitem {logique.h}, \hyperpage{37}
+  \item {star}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {stars}
+    \subitem {playerinfo\_s}, \hyperpage{7}
+  \item {startTime}
+    \subitem {gameinfo\_s}, \hyperpage{6}
+
+  \indexspace
+
+  \item {tests.c}, \hyperpage{59}
+  \item {time}
+    \subitem {resources\_s}, \hyperpage{10}
+  \item {transition.c}, \hyperpage{60}
+    \subitem {clean}, \hyperpage{61}
+    \subitem {concat\_array\_playername}, \hyperpage{61}
+    \subitem {formatted\_charArray\_to\_uint}, \hyperpage{62}
+    \subitem {handle\_events}, \hyperpage{62}
+    \subitem {init}, \hyperpage{62}
+    \subitem {init\_player}, \hyperpage{63}
+    \subitem {save\_info}, \hyperpage{63}
+    \subitem {save\_score}, \hyperpage{63}
+  \item {transition.h}, \hyperpage{64}
+    \subitem {clean}, \hyperpage{65}
+    \subitem {concat\_array\_playername}, \hyperpage{65}
+    \subitem {formatted\_charArray\_to\_uint}, \hyperpage{66}
+    \subitem {handle\_events}, \hyperpage{66}
+    \subitem {init}, \hyperpage{66}
+    \subitem {init\_player}, \hyperpage{67}
+    \subitem {save\_info}, \hyperpage{67}
+    \subitem {save\_score}, \hyperpage{67}
+
+  \indexspace
+
+  \item {update\_data}
+    \subitem {logique.c}, \hyperpage{30}
+    \subitem {logique.h}, \hyperpage{38}
+  \item {update\_screen}
+    \subitem {sdl2-\/light.c}, \hyperpage{51}
+    \subitem {sdl2-\/light.h}, \hyperpage{55}
+  \item {update\_sprites}
+    \subitem {logique.c}, \hyperpage{31}
+    \subitem {logique.h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {w}
+    \subitem {sprite\_s}, \hyperpage{11}
+  \item {world\_s}, \hyperpage{12}
+    \subitem {bonus}, \hyperpage{13}
+    \subitem {bonus\_type}, \hyperpage{13}
+    \subitem {collision}, \hyperpage{13}
+    \subitem {collision\_finish\_line}, \hyperpage{13}
+    \subitem {ennemy}, \hyperpage{13}
+    \subitem {finish\_line}, \hyperpage{13}
+    \subitem {gameover}, \hyperpage{13}
+    \subitem {hasShield}, \hyperpage{13}
+    \subitem {is\_bonus\_available}, \hyperpage{14}
+    \subitem {is\_ennemy\_dead}, \hyperpage{14}
+    \subitem {is\_missile\_free}, \hyperpage{14}
+    \subitem {meteorite}, \hyperpage{14}
+    \subitem {missile}, \hyperpage{14}
+    \subitem {ship}, \hyperpage{14}
+
+  \indexspace
+
+  \item {x}
+    \subitem {sprite\_s}, \hyperpage{11}
+
+  \indexspace
+
+  \item {y}
+    \subitem {sprite\_s}, \hyperpage{12}
+
+\end{theindex}

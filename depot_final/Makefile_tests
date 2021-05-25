@@ -1,0 +1,23 @@
+CFLAGS = -O3 `sdl2-config --cflags`
+LDFLAGS = `sdl2-config --libs` -lSDL2_ttf -lm
+
+INC = definition.h logique.h
+SRC = tests.c logique.c
+OBJ = $(SRC:%.c=%.o)
+
+PROG = test
+
+%.o: %.c $(INC)
+	gcc $(CFLAGS) -c $<
+
+test: $(OBJ)
+	gcc $(CFLAGS) $(OBJ) $(LDFLAGS) -o $@
+
+doc: $(PROG)
+	doxygen ./$(PROG)
+	make -C latex
+
+clean:
+	rm -f *~ *.o $(PROG)
+	rm -rf latex html
+

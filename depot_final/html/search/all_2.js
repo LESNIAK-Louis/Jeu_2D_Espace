@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['clean_17',['clean',['../transition_8c.html#a0a2942e4bb43c87ba6d934bed1ccd157',1,'clean(SDL_Window *window, SDL_Renderer *renderer, resources_t *resources, world_t *world, gameinfo_t *game):&#160;transition.c'],['../transition_8h.html#a0a2942e4bb43c87ba6d934bed1ccd157',1,'clean(SDL_Window *window, SDL_Renderer *renderer, resources_t *resources, world_t *world, gameinfo_t *game):&#160;transition.c']]],
+  ['clean_5ffont_18',['clean_font',['../sdl2-ttf-light_8c.html#af763a1894238fa2a7f3384461f8e8ded',1,'clean_font(TTF_Font *font):&#160;sdl2-ttf-light.c'],['../sdl2-ttf-light_8h.html#af763a1894238fa2a7f3384461f8e8ded',1,'clean_font(TTF_Font *font):&#160;sdl2-ttf-light.c']]],
+  ['clean_5fresources_19',['clean_resources',['../graphique_8c.html#a7f1b983d12511cd39a0f27ce6c974f12',1,'clean_resources(resources_t *resources):&#160;graphique.c'],['../graphique_8h.html#a7f1b983d12511cd39a0f27ce6c974f12',1,'clean_resources(resources_t *resources):&#160;graphique.c']]],
+  ['clean_5fsdl_20',['clean_sdl',['../sdl2-light_8c.html#a69f5b063948b40b1bac5bb2518ed9e52',1,'clean_sdl(SDL_Renderer *renderer, SDL_Window *window):&#160;sdl2-light.c'],['../sdl2-light_8h.html#a69f5b063948b40b1bac5bb2518ed9e52',1,'clean_sdl(SDL_Renderer *renderer, SDL_Window *window):&#160;sdl2-light.c']]],
+  ['clean_5ftexture_21',['clean_texture',['../sdl2-light_8c.html#a6be5ef20bb308cf4f73ab911b33705e8',1,'clean_texture(SDL_Texture *texture):&#160;sdl2-light.c'],['../sdl2-light_8h.html#a6be5ef20bb308cf4f73ab911b33705e8',1,'clean_texture(SDL_Texture *texture):&#160;sdl2-light.c']]],
+  ['clear_5frenderer_22',['clear_renderer',['../sdl2-light_8c.html#a572bf07064fc55f12238e71ba2930f5f',1,'clear_renderer(SDL_Renderer *renderer):&#160;sdl2-light.c'],['../sdl2-light_8h.html#a572bf07064fc55f12238e71ba2930f5f',1,'clear_renderer(SDL_Renderer *renderer):&#160;sdl2-light.c']]],
+  ['close_23',['close',['../structgameinfo__s.html#a0db35d31292d5864148daf861fbe9170',1,'gameinfo_s']]],
+  ['collision_24',['collision',['../structworld__s.html#adf29b73d7e553cbe1070b2a855f53d87',1,'world_s']]],
+  ['collision_5ffinish_5fline_25',['collision_finish_line',['../structworld__s.html#a600fff8d5b80c77acd2ad9386b53b3d4',1,'world_s']]],
+  ['concat_5farray_5fplayername_26',['concat_array_playername',['../transition_8c.html#aa4805ba2b0730ff191269c88a1a9fc2e',1,'concat_array_playername(playerinfo_t *player, char *array, unsigned int arraySize):&#160;transition.c'],['../transition_8h.html#aa4805ba2b0730ff191269c88a1a9fc2e',1,'concat_array_playername(playerinfo_t *player, char *array, unsigned int arraySize):&#160;transition.c']]]
+];

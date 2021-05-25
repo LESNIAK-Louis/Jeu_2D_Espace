@@ -1,0 +1,144 @@
+\hypertarget{structworld__s}{}\doxysection{world\+\_\+s Struct Reference}
+\label{structworld__s}\index{world\_s@{world\_s}}
+
+
+Représentation du monde du jeu.  
+
+
+
+
+{\ttfamily \#include $<$logique.\+h$>$}
+
+
+
+Collaboration diagram for world\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_ad97aa23e8135609a104ee3da23289d5b}{ship}}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_af2b60a4e7c8f4a050080847d10fd53cd}{finish\+\_\+line}}
+\item 
+\mbox{\Hypertarget{structworld__s_acaf4d3c8a81d6aa0f77870c81f972cc6}\label{structworld__s_acaf4d3c8a81d6aa0f77870c81f972cc6}} 
+int {\bfseries vy}
+\item 
+int \mbox{\hyperlink{structworld__s_a693aa82d082fe3467969094559b9bc0f}{gameover}}
+\item 
+int \mbox{\hyperlink{structworld__s_adf29b73d7e553cbe1070b2a855f53d87}{collision}}
+\item 
+int \mbox{\hyperlink{structworld__s_a600fff8d5b80c77acd2ad9386b53b3d4}{collision\+\_\+finish\+\_\+line}}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_a1dc41e79882a166577f638af6c4b9ea2}{meteorite}} \mbox{[}\mbox{\hyperlink{definition_8h_a6353f2acc1d470ed059fbfc44e9d731f}{N\+B\+\_\+\+W\+A\+L\+LS}}\mbox{]}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_a032aaeb9796cf7416a26e8f98ec6f40b}{bonus}} \mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{structworld__s_aa6f59956802821fe0bcac0d676e11146}{bonus\+\_\+type}} \mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{structworld__s_a666f48833378adf4391333c3389c846e}{is\+\_\+bonus\+\_\+available}} \mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{structworld__s_a1629447aea3bedd0181f42517fe8af9f}{has\+Shield}}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_ae41ded88f11a706ac8872723692b16d7}{missile}} \mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{structworld__s_a92d1d363812c9827e5fd3da147b0d18f}{is\+\_\+missile\+\_\+free}} \mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}
+\item 
+\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} \mbox{\hyperlink{structworld__s_a4a7cb43c519b02f517dc7be96cb78f83}{ennemy}} \mbox{[}\mbox{\hyperlink{definition_8h_a52e1b79c7eb30985de9f60d542bd255c}{E\+N\+N\+E\+M\+I\+E\+S\+\_\+\+M\+AX}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{structworld__s_a0da81506dfbae1c68aa2bf5d7c64a1e7}{is\+\_\+ennemy\+\_\+dead}} \mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représentation du monde du jeu. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structworld__s_a032aaeb9796cf7416a26e8f98ec6f40b}\label{structworld__s_a032aaeb9796cf7416a26e8f98ec6f40b}} 
+\index{world\_s@{world\_s}!bonus@{bonus}}
+\index{bonus@{bonus}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{bonus}{bonus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::bonus\mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}}
+
+Champ représentant un tableau de sprite de type bonus \mbox{\Hypertarget{structworld__s_aa6f59956802821fe0bcac0d676e11146}\label{structworld__s_aa6f59956802821fe0bcac0d676e11146}} 
+\index{world\_s@{world\_s}!bonus\_type@{bonus\_type}}
+\index{bonus\_type@{bonus\_type}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{bonus\_type}{bonus\_type}}
+{\footnotesize\ttfamily unsigned int world\+\_\+s\+::bonus\+\_\+type\mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}}
+
+Champ représentant un tableau indiquant le type du bonus associé au même indice \mbox{\Hypertarget{structworld__s_adf29b73d7e553cbe1070b2a855f53d87}\label{structworld__s_adf29b73d7e553cbe1070b2a855f53d87}} 
+\index{world\_s@{world\_s}!collision@{collision}}
+\index{collision@{collision}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily int world\+\_\+s\+::collision}
+
+Champ indiquant si le vaisseau est rentré en colision avec un mur ou un ennemi \mbox{\Hypertarget{structworld__s_a600fff8d5b80c77acd2ad9386b53b3d4}\label{structworld__s_a600fff8d5b80c77acd2ad9386b53b3d4}} 
+\index{world\_s@{world\_s}!collision\_finish\_line@{collision\_finish\_line}}
+\index{collision\_finish\_line@{collision\_finish\_line}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{collision\_finish\_line}{collision\_finish\_line}}
+{\footnotesize\ttfamily int world\+\_\+s\+::collision\+\_\+finish\+\_\+line}
+
+Champ indiquant si le vaisseau est rentré en colision avec la ligne d\textquotesingle{}arrivée \mbox{\Hypertarget{structworld__s_a4a7cb43c519b02f517dc7be96cb78f83}\label{structworld__s_a4a7cb43c519b02f517dc7be96cb78f83}} 
+\index{world\_s@{world\_s}!ennemy@{ennemy}}
+\index{ennemy@{ennemy}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{ennemy}{ennemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::ennemy\mbox{[}\mbox{\hyperlink{definition_8h_a52e1b79c7eb30985de9f60d542bd255c}{E\+N\+N\+E\+M\+I\+E\+S\+\_\+\+M\+AX}}\mbox{]}}
+
+Champ représentant un tableau de sprite de type ennemi \mbox{\Hypertarget{structworld__s_af2b60a4e7c8f4a050080847d10fd53cd}\label{structworld__s_af2b60a4e7c8f4a050080847d10fd53cd}} 
+\index{world\_s@{world\_s}!finish\_line@{finish\_line}}
+\index{finish\_line@{finish\_line}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{finish\_line}{finish\_line}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::finish\+\_\+line}
+
+Champ représentant la ligne d\textquotesingle{}arrivée \mbox{\Hypertarget{structworld__s_a693aa82d082fe3467969094559b9bc0f}\label{structworld__s_a693aa82d082fe3467969094559b9bc0f}} 
+\index{world\_s@{world\_s}!gameover@{gameover}}
+\index{gameover@{gameover}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{gameover}{gameover}}
+{\footnotesize\ttfamily int world\+\_\+s\+::gameover}
+
+Champ représentant la vitesse du jeu Champ indiquant si l\textquotesingle{}on est à la fin du jeu \mbox{\Hypertarget{structworld__s_a1629447aea3bedd0181f42517fe8af9f}\label{structworld__s_a1629447aea3bedd0181f42517fe8af9f}} 
+\index{world\_s@{world\_s}!hasShield@{hasShield}}
+\index{hasShield@{hasShield}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{hasShield}{hasShield}}
+{\footnotesize\ttfamily unsigned char world\+\_\+s\+::has\+Shield}
+
+Champ si le joueur possède ou non un bouclier \mbox{\Hypertarget{structworld__s_a666f48833378adf4391333c3389c846e}\label{structworld__s_a666f48833378adf4391333c3389c846e}} 
+\index{world\_s@{world\_s}!is\_bonus\_available@{is\_bonus\_available}}
+\index{is\_bonus\_available@{is\_bonus\_available}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{is\_bonus\_available}{is\_bonus\_available}}
+{\footnotesize\ttfamily unsigned int world\+\_\+s\+::is\+\_\+bonus\+\_\+available\mbox{[}\mbox{\hyperlink{definition_8h_a0ccacc3ecbbc935176fd11454ecb79d6}{N\+B\+\_\+\+B\+O\+N\+US}}\mbox{]}}
+
+Champ représentant un tableau indiquant si le bonus associé au même indice est disponible \mbox{\Hypertarget{structworld__s_a0da81506dfbae1c68aa2bf5d7c64a1e7}\label{structworld__s_a0da81506dfbae1c68aa2bf5d7c64a1e7}} 
+\index{world\_s@{world\_s}!is\_ennemy\_dead@{is\_ennemy\_dead}}
+\index{is\_ennemy\_dead@{is\_ennemy\_dead}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{is\_ennemy\_dead}{is\_ennemy\_dead}}
+{\footnotesize\ttfamily unsigned char world\+\_\+s\+::is\+\_\+ennemy\+\_\+dead\mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}}
+
+Champ représentant un tableau indiquant si l\textquotesingle{}ennemi associé au même indice est mort ou vivant \mbox{\Hypertarget{structworld__s_a92d1d363812c9827e5fd3da147b0d18f}\label{structworld__s_a92d1d363812c9827e5fd3da147b0d18f}} 
+\index{world\_s@{world\_s}!is\_missile\_free@{is\_missile\_free}}
+\index{is\_missile\_free@{is\_missile\_free}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{is\_missile\_free}{is\_missile\_free}}
+{\footnotesize\ttfamily unsigned char world\+\_\+s\+::is\+\_\+missile\+\_\+free\mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}}
+
+Champ représentant un tableau indiquant si le missile associé au même indice est disponible \mbox{\Hypertarget{structworld__s_a1dc41e79882a166577f638af6c4b9ea2}\label{structworld__s_a1dc41e79882a166577f638af6c4b9ea2}} 
+\index{world\_s@{world\_s}!meteorite@{meteorite}}
+\index{meteorite@{meteorite}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{meteorite}{meteorite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::meteorite\mbox{[}\mbox{\hyperlink{definition_8h_a6353f2acc1d470ed059fbfc44e9d731f}{N\+B\+\_\+\+W\+A\+L\+LS}}\mbox{]}}
+
+Champ représentant un tableau de murs de météorites \mbox{\Hypertarget{structworld__s_ae41ded88f11a706ac8872723692b16d7}\label{structworld__s_ae41ded88f11a706ac8872723692b16d7}} 
+\index{world\_s@{world\_s}!missile@{missile}}
+\index{missile@{missile}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{missile}{missile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::missile\mbox{[}\mbox{\hyperlink{definition_8h_abff3a958ed2a2577a2cfc5a264ab490c}{M\+I\+S\+S\+I\+L\+E\+\_\+\+M\+AX}}\mbox{]}}
+
+Champ représentant un tableau de sprite de type missile \mbox{\Hypertarget{structworld__s_ad97aa23e8135609a104ee3da23289d5b}\label{structworld__s_ad97aa23e8135609a104ee3da23289d5b}} 
+\index{world\_s@{world\_s}!ship@{ship}}
+\index{ship@{ship}!world\_s@{world\_s}}
+\doxysubsubsection{\texorpdfstring{ship}{ship}}
+{\footnotesize\ttfamily \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} world\+\_\+s\+::ship}
+
+Champ représentant le sprite vaisseau 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{logique_8h}{logique.\+h}}\end{DoxyCompactItemize}

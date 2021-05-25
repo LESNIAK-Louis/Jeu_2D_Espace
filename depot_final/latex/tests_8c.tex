@@ -1,0 +1,99 @@
+\hypertarget{tests_8c}{}\doxysection{tests.\+c File Reference}
+\label{tests_8c}\index{tests.c@{tests.c}}
+
+
+Programme testant la partie logique du jeu.  
+
+
+{\ttfamily \#include \char`\"{}definition.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logique.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for tests.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tests_8c_a1285c12fb696c5fe15e4a016be544669}\label{tests_8c_a1285c12fb696c5fe15e4a016be544669}} 
+void {\bfseries test\+\_\+init\+\_\+sprite\+\_\+param} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite, int x, int y, int w, int h)
+\item 
+\mbox{\Hypertarget{tests_8c_af38004eeb2f304d3f56ed3e0a66fee24}\label{tests_8c_af38004eeb2f304d3f56ed3e0a66fee24}} 
+void {\bfseries test\+\_\+init\+\_\+sprite} ()
+\item 
+\mbox{\Hypertarget{tests_8c_aea9b6c92c0fc5689b682e2adb72c4a3b}\label{tests_8c_aea9b6c92c0fc5689b682e2adb72c4a3b}} 
+void {\bfseries test\+\_\+depassement\+\_\+g\+\_\+param} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite)
+\item 
+\mbox{\Hypertarget{tests_8c_a61190aaa8ec27ba015bd0fdab2cd5fd8}\label{tests_8c_a61190aaa8ec27ba015bd0fdab2cd5fd8}} 
+void {\bfseries test\+\_\+depassement\+\_\+g} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a7801fd3a88ecf89216894bf9572a72d3}\label{tests_8c_a7801fd3a88ecf89216894bf9572a72d3}} 
+void {\bfseries test\+\_\+depassement\+\_\+d\+\_\+param} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite)
+\item 
+\mbox{\Hypertarget{tests_8c_aaec6128aaf512c8945f9fcfdce621673}\label{tests_8c_aaec6128aaf512c8945f9fcfdce621673}} 
+void {\bfseries test\+\_\+depassement\+\_\+d} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a39030e70ea0ddabf5eee8060fdd6a25a}\label{tests_8c_a39030e70ea0ddabf5eee8060fdd6a25a}} 
+void {\bfseries test\+\_\+sprites\+\_\+collide\+\_\+param} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite1, \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} $\ast$sprite2)
+\item 
+\mbox{\Hypertarget{tests_8c_a3f8d75fca0f8f293e9e3ef0361aa357d}\label{tests_8c_a3f8d75fca0f8f293e9e3ef0361aa357d}} 
+void {\bfseries test\+\_\+sprites\+\_\+collide} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a5299c0cd261ecfd33be9c97385733d7b}\label{tests_8c_a5299c0cd261ecfd33be9c97385733d7b}} 
+void {\bfseries test\+\_\+init\+\_\+walls\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\item 
+\mbox{\Hypertarget{tests_8c_ab30a17559d05e0b004a94d72cae2e186}\label{tests_8c_ab30a17559d05e0b004a94d72cae2e186}} 
+void {\bfseries test\+\_\+init\+\_\+walls} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a274f4982fb7e5d23118ca39fc3160556}\label{tests_8c_a274f4982fb7e5d23118ca39fc3160556}} 
+void {\bfseries test\+\_\+init\+\_\+bonus\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\item 
+\mbox{\Hypertarget{tests_8c_aab4c6354b995e5fbf9e0f5098404b632}\label{tests_8c_aab4c6354b995e5fbf9e0f5098404b632}} 
+void {\bfseries test\+\_\+init\+\_\+bonus} ()
+\item 
+\mbox{\Hypertarget{tests_8c_ac9c0bf7547326fa599a6fe9d52a4680a}\label{tests_8c_ac9c0bf7547326fa599a6fe9d52a4680a}} 
+void {\bfseries test\+\_\+init\+\_\+ennemies\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\item 
+\mbox{\Hypertarget{tests_8c_a95c94c3c402363ae23c2c9b8880671e8}\label{tests_8c_a95c94c3c402363ae23c2c9b8880671e8}} 
+void {\bfseries test\+\_\+init\+\_\+ennemies} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a5b8257008d0803eca93423bdaa3b3653}\label{tests_8c_a5b8257008d0803eca93423bdaa3b3653}} 
+void {\bfseries test\+\_\+init\+\_\+missiles\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\item 
+\mbox{\Hypertarget{tests_8c_abd3e2165bf685a8c365de26c12719497}\label{tests_8c_abd3e2165bf685a8c365de26c12719497}} 
+void {\bfseries test\+\_\+init\+\_\+missiles} ()
+\item 
+\mbox{\Hypertarget{tests_8c_acff6c718446ad157cd74bf4888bb7227}\label{tests_8c_acff6c718446ad157cd74bf4888bb7227}} 
+void {\bfseries test\+\_\+shoot\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world)
+\item 
+\mbox{\Hypertarget{tests_8c_a069380ffc68a05d509e43b5c56658312}\label{tests_8c_a069380ffc68a05d509e43b5c56658312}} 
+void {\bfseries test\+\_\+shoot} ()
+\item 
+\mbox{\Hypertarget{tests_8c_ad9fe75ab3ff205f0937d639979a23880}\label{tests_8c_ad9fe75ab3ff205f0937d639979a23880}} 
+void {\bfseries test\+\_\+update\+\_\+sprites\+\_\+param} (\mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} $\ast$world, \mbox{\hyperlink{logique_8h_ac974d9f59f408a135788ce681901efa1}{playerinfo\+\_\+t}} $\ast$player, \mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} $\ast$game)
+\item 
+\mbox{\Hypertarget{tests_8c_a63bb7c5ba4213ecc09ad872048b7f910}\label{tests_8c_a63bb7c5ba4213ecc09ad872048b7f910}} 
+void {\bfseries test\+\_\+update\+\_\+sprites} ()
+\item 
+\mbox{\Hypertarget{tests_8c_a4dd77a4b54781d61809944ef2e909adf}\label{tests_8c_a4dd77a4b54781d61809944ef2e909adf}} 
+void {\bfseries test\+\_\+handle\+\_\+sprites\+\_\+collision\+\_\+param} (\mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} sp1, \mbox{\hyperlink{logique_8h_a5371414b10358aeda7c6bcec8196342f}{sprite\+\_\+t}} sp2, \mbox{\hyperlink{logique_8h_ad55869c5e54f717062ec699d20fa8886}{world\+\_\+t}} world, \mbox{\hyperlink{logique_8h_ac974d9f59f408a135788ce681901efa1}{playerinfo\+\_\+t}} player, \mbox{\hyperlink{logique_8h_a9a2d3eb984d907472c65ef58d1f0399d}{gameinfo\+\_\+t}} game, int sprite\+\_\+type)
+\item 
+\mbox{\Hypertarget{tests_8c_ab01a61fe76f3e9468654d1632b5257ac}\label{tests_8c_ab01a61fe76f3e9468654d1632b5257ac}} 
+void {\bfseries test\+\_\+handle\+\_\+sprites\+\_\+collision} ()
+\item 
+\mbox{\Hypertarget{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Programme testant la partie logique du jeu. 
+
+\begin{DoxyAuthor}{Author}
+L\+E\+S\+N\+I\+AK Louis \& S\+L\+I\+M\+A\+NI Kamelia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 + extensions 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23 mai 2021 
+\end{DoxyDate}

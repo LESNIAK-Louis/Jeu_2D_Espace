@@ -1,0 +1,221 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}gameinfo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Member Data Documentation}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}close}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}enter}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}finishTime}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}gamemode}{6}{subsubsection.3.1.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}select}{6}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}startTime}{6}{subsubsection.3.1.2.6}%
+\contentsline {section}{\numberline {3.2}playerinfo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{7}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Member Data Documentation}{7}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}bestTime}{7}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}hasShip}{7}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}lastTime}{7}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}name}{7}{subsubsection.3.2.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}selectedShip}{7}{subsubsection.3.2.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.2.6}stars}{7}{subsubsection.3.2.2.6}%
+\contentsline {section}{\numberline {3.3}resources\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Member Data Documentation}{8}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}background}{8}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}background\_menu}{8}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}ennemy\_ship}{9}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}finish\_line}{9}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}font}{9}{subsubsection.3.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.6}font\_menu}{9}{subsubsection.3.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.3.2.7}meteorite}{9}{subsubsection.3.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.3.2.8}missile}{9}{subsubsection.3.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.3.2.9}return\_menu}{9}{subsubsection.3.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.3.2.10}select}{9}{subsubsection.3.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.3.2.11}selected}{10}{subsubsection.3.3.2.11}%
+\contentsline {subsubsection}{\numberline {3.3.2.12}shield}{10}{subsubsection.3.3.2.12}%
+\contentsline {subsubsection}{\numberline {3.3.2.13}ship}{10}{subsubsection.3.3.2.13}%
+\contentsline {subsubsection}{\numberline {3.3.2.14}ship1}{10}{subsubsection.3.3.2.14}%
+\contentsline {subsubsection}{\numberline {3.3.2.15}ship2}{10}{subsubsection.3.3.2.15}%
+\contentsline {subsubsection}{\numberline {3.3.2.16}ship3}{10}{subsubsection.3.3.2.16}%
+\contentsline {subsubsection}{\numberline {3.3.2.17}ship4}{10}{subsubsection.3.3.2.17}%
+\contentsline {subsubsection}{\numberline {3.3.2.18}star}{10}{subsubsection.3.3.2.18}%
+\contentsline {subsubsection}{\numberline {3.3.2.19}time}{11}{subsubsection.3.3.2.19}%
+\contentsline {section}{\numberline {3.4}sprite\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{11}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{11}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Member Data Documentation}{11}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}h}{11}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}w}{11}{subsubsection.3.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}x}{12}{subsubsection.3.4.2.3}%
+\contentsline {subsubsection}{\numberline {3.4.2.4}y}{12}{subsubsection.3.4.2.4}%
+\contentsline {section}{\numberline {3.5}world\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{12}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{12}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Member Data Documentation}{13}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}bonus}{13}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}bonus\_type}{13}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}collision}{13}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}collision\_finish\_line}{13}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}ennemy}{13}{subsubsection.3.5.2.5}%
+\contentsline {subsubsection}{\numberline {3.5.2.6}finish\_line}{13}{subsubsection.3.5.2.6}%
+\contentsline {subsubsection}{\numberline {3.5.2.7}gameover}{13}{subsubsection.3.5.2.7}%
+\contentsline {subsubsection}{\numberline {3.5.2.8}hasShield}{14}{subsubsection.3.5.2.8}%
+\contentsline {subsubsection}{\numberline {3.5.2.9}is\_bonus\_available}{14}{subsubsection.3.5.2.9}%
+\contentsline {subsubsection}{\numberline {3.5.2.10}is\_ennemy\_dead}{14}{subsubsection.3.5.2.10}%
+\contentsline {subsubsection}{\numberline {3.5.2.11}is\_missile\_free}{14}{subsubsection.3.5.2.11}%
+\contentsline {subsubsection}{\numberline {3.5.2.12}meteorite}{14}{subsubsection.3.5.2.12}%
+\contentsline {subsubsection}{\numberline {3.5.2.13}missile}{14}{subsubsection.3.5.2.13}%
+\contentsline {subsubsection}{\numberline {3.5.2.14}ship}{14}{subsubsection.3.5.2.14}%
+\contentsline {chapter}{\numberline {4}File Documentation}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}definition.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}graphique.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{16}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Function Documentation}{16}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}apply\_background()}{16}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}apply\_bonus()}{17}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}apply\_ennemies()}{17}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}apply\_missiles()}{17}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}apply\_sprite()}{18}{subsubsection.4.2.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.2.6}apply\_texts()}{18}{subsubsection.4.2.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.2.7}apply\_walls()}{18}{subsubsection.4.2.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.2.8}clean\_resources()}{19}{subsubsection.4.2.2.8}%
+\contentsline {subsubsection}{\numberline {4.2.2.9}init\_resources()}{19}{subsubsection.4.2.2.9}%
+\contentsline {subsubsection}{\numberline {4.2.2.10}refresh\_graphics()}{19}{subsubsection.4.2.2.10}%
+\contentsline {section}{\numberline {4.3}graphique.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{21}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Function Documentation}{21}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}apply\_background()}{21}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}apply\_bonus()}{21}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}apply\_ennemies()}{22}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}apply\_missiles()}{22}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}apply\_sprite()}{22}{subsubsection.4.3.2.5}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}apply\_texts()}{23}{subsubsection.4.3.2.6}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}apply\_walls()}{23}{subsubsection.4.3.2.7}%
+\contentsline {subsubsection}{\numberline {4.3.2.8}clean\_resources()}{23}{subsubsection.4.3.2.8}%
+\contentsline {subsubsection}{\numberline {4.3.2.9}init\_resources()}{24}{subsubsection.4.3.2.9}%
+\contentsline {subsubsection}{\numberline {4.3.2.10}refresh\_graphics()}{24}{subsubsection.4.3.2.10}%
+\contentsline {section}{\numberline {4.4}logique.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{24}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Function Documentation}{26}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}abs()}{26}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}depassement\_d()}{26}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}depassement\_g()}{26}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}handle\_sprites\_collision()}{27}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}init\_bonus()}{27}{subsubsection.4.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.4.2.6}init\_data()}{27}{subsubsection.4.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.4.2.7}init\_ennemies()}{28}{subsubsection.4.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.4.2.8}init\_missiles()}{28}{subsubsection.4.4.2.8}%
+\contentsline {subsubsection}{\numberline {4.4.2.9}init\_sprite()}{28}{subsubsection.4.4.2.9}%
+\contentsline {subsubsection}{\numberline {4.4.2.10}init\_walls()}{29}{subsubsection.4.4.2.10}%
+\contentsline {subsubsection}{\numberline {4.4.2.11}is\_game\_over()}{29}{subsubsection.4.4.2.11}%
+\contentsline {subsubsection}{\numberline {4.4.2.12}print\_sprite()}{29}{subsubsection.4.4.2.12}%
+\contentsline {subsubsection}{\numberline {4.4.2.13}retreive\_index()}{29}{subsubsection.4.4.2.13}%
+\contentsline {subsubsection}{\numberline {4.4.2.14}shoot()}{30}{subsubsection.4.4.2.14}%
+\contentsline {subsubsection}{\numberline {4.4.2.15}sprites\_collide()}{30}{subsubsection.4.4.2.15}%
+\contentsline {subsubsection}{\numberline {4.4.2.16}update\_data()}{31}{subsubsection.4.4.2.16}%
+\contentsline {subsubsection}{\numberline {4.4.2.17}update\_sprites()}{31}{subsubsection.4.4.2.17}%
+\contentsline {section}{\numberline {4.5}logique.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{31}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{33}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{33}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}abs()}{33}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}depassement\_d()}{33}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}depassement\_g()}{34}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}handle\_sprites\_collision()}{34}{subsubsection.4.5.2.4}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}init\_bonus()}{34}{subsubsection.4.5.2.5}%
+\contentsline {subsubsection}{\numberline {4.5.2.6}init\_data()}{35}{subsubsection.4.5.2.6}%
+\contentsline {subsubsection}{\numberline {4.5.2.7}init\_ennemies()}{35}{subsubsection.4.5.2.7}%
+\contentsline {subsubsection}{\numberline {4.5.2.8}init\_missiles()}{35}{subsubsection.4.5.2.8}%
+\contentsline {subsubsection}{\numberline {4.5.2.9}init\_sprite()}{35}{subsubsection.4.5.2.9}%
+\contentsline {subsubsection}{\numberline {4.5.2.10}init\_walls()}{36}{subsubsection.4.5.2.10}%
+\contentsline {subsubsection}{\numberline {4.5.2.11}is\_game\_over()}{36}{subsubsection.4.5.2.11}%
+\contentsline {subsubsection}{\numberline {4.5.2.12}print\_sprite()}{37}{subsubsection.4.5.2.12}%
+\contentsline {subsubsection}{\numberline {4.5.2.13}retreive\_index()}{37}{subsubsection.4.5.2.13}%
+\contentsline {subsubsection}{\numberline {4.5.2.14}shoot()}{37}{subsubsection.4.5.2.14}%
+\contentsline {subsubsection}{\numberline {4.5.2.15}sprites\_collide()}{38}{subsubsection.4.5.2.15}%
+\contentsline {subsubsection}{\numberline {4.5.2.16}update\_data()}{38}{subsubsection.4.5.2.16}%
+\contentsline {subsubsection}{\numberline {4.5.2.17}update\_sprites()}{38}{subsubsection.4.5.2.17}%
+\contentsline {section}{\numberline {4.6}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{39}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{39}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{39}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{40}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{40}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}apply\_menu()}{40}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}buy\_select\_ship()}{41}{subsubsection.4.7.2.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.3}menu\_credits()}{41}{subsubsection.4.7.2.3}%
+\contentsline {subsubsection}{\numberline {4.7.2.4}menu\_infos()}{41}{subsubsection.4.7.2.4}%
+\contentsline {subsubsection}{\numberline {4.7.2.5}menu\_main()}{42}{subsubsection.4.7.2.5}%
+\contentsline {subsubsection}{\numberline {4.7.2.6}menu\_shop()}{42}{subsubsection.4.7.2.6}%
+\contentsline {subsubsection}{\numberline {4.7.2.7}print\_select()}{43}{subsubsection.4.7.2.7}%
+\contentsline {subsubsection}{\numberline {4.7.2.8}print\_stars()}{43}{subsubsection.4.7.2.8}%
+\contentsline {section}{\numberline {4.8}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{44}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{44}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Function Documentation}{44}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}apply\_menu()}{45}{subsubsection.4.8.2.1}%
+\contentsline {subsubsection}{\numberline {4.8.2.2}buy\_select\_ship()}{45}{subsubsection.4.8.2.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.3}menu\_credits()}{45}{subsubsection.4.8.2.3}%
+\contentsline {subsubsection}{\numberline {4.8.2.4}menu\_infos()}{46}{subsubsection.4.8.2.4}%
+\contentsline {subsubsection}{\numberline {4.8.2.5}menu\_main()}{46}{subsubsection.4.8.2.5}%
+\contentsline {subsubsection}{\numberline {4.8.2.6}menu\_shop()}{46}{subsubsection.4.8.2.6}%
+\contentsline {subsubsection}{\numberline {4.8.2.7}print\_select()}{47}{subsubsection.4.8.2.7}%
+\contentsline {subsubsection}{\numberline {4.8.2.8}print\_stars()}{47}{subsubsection.4.8.2.8}%
+\contentsline {section}{\numberline {4.9}sdl2-\/light.c File Reference}{48}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{48}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Function Documentation}{48}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}apply\_texture()}{49}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}clean\_sdl()}{49}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}clean\_texture()}{49}{subsubsection.4.9.2.3}%
+\contentsline {subsubsection}{\numberline {4.9.2.4}clear\_renderer()}{50}{subsubsection.4.9.2.4}%
+\contentsline {subsubsection}{\numberline {4.9.2.5}init\_sdl()}{50}{subsubsection.4.9.2.5}%
+\contentsline {subsubsection}{\numberline {4.9.2.6}load\_image()}{50}{subsubsection.4.9.2.6}%
+\contentsline {subsubsection}{\numberline {4.9.2.7}pause()}{51}{subsubsection.4.9.2.7}%
+\contentsline {subsubsection}{\numberline {4.9.2.8}update\_screen()}{51}{subsubsection.4.9.2.8}%
+\contentsline {section}{\numberline {4.10}sdl2-\/light.h File Reference}{51}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{52}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Function Documentation}{52}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}apply\_texture()}{52}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}clean\_sdl()}{53}{subsubsection.4.10.2.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.3}clean\_texture()}{53}{subsubsection.4.10.2.3}%
+\contentsline {subsubsection}{\numberline {4.10.2.4}clear\_renderer()}{53}{subsubsection.4.10.2.4}%
+\contentsline {subsubsection}{\numberline {4.10.2.5}init\_sdl()}{53}{subsubsection.4.10.2.5}%
+\contentsline {subsubsection}{\numberline {4.10.2.6}load\_image()}{54}{subsubsection.4.10.2.6}%
+\contentsline {subsubsection}{\numberline {4.10.2.7}pause()}{54}{subsubsection.4.10.2.7}%
+\contentsline {subsubsection}{\numberline {4.10.2.8}update\_screen()}{55}{subsubsection.4.10.2.8}%
+\contentsline {section}{\numberline {4.11}sdl2-\/ttf-\/light.c File Reference}{55}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{55}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Function Documentation}{56}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}apply\_text()}{56}{subsubsection.4.11.2.1}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}clean\_font()}{56}{subsubsection.4.11.2.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.3}load\_font()}{57}{subsubsection.4.11.2.3}%
+\contentsline {section}{\numberline {4.12}sdl2-\/ttf-\/light.h File Reference}{57}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{57}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Function Documentation}{58}{subsection.4.12.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}apply\_text()}{58}{subsubsection.4.12.2.1}%
+\contentsline {subsubsection}{\numberline {4.12.2.2}clean\_font()}{58}{subsubsection.4.12.2.2}%
+\contentsline {subsubsection}{\numberline {4.12.2.3}load\_font()}{59}{subsubsection.4.12.2.3}%
+\contentsline {section}{\numberline {4.13}tests.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{59}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{60}{subsection.4.13.1}%
+\contentsline {section}{\numberline {4.14}transition.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{60}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{61}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Function Documentation}{61}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}clean()}{61}{subsubsection.4.14.2.1}%
+\contentsline {subsubsection}{\numberline {4.14.2.2}concat\_array\_playername()}{61}{subsubsection.4.14.2.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.3}formatted\_charArray\_to\_uint()}{62}{subsubsection.4.14.2.3}%
+\contentsline {subsubsection}{\numberline {4.14.2.4}handle\_events()}{62}{subsubsection.4.14.2.4}%
+\contentsline {subsubsection}{\numberline {4.14.2.5}init()}{62}{subsubsection.4.14.2.5}%
+\contentsline {subsubsection}{\numberline {4.14.2.6}init\_player()}{63}{subsubsection.4.14.2.6}%
+\contentsline {subsubsection}{\numberline {4.14.2.7}save\_info()}{63}{subsubsection.4.14.2.7}%
+\contentsline {subsubsection}{\numberline {4.14.2.8}save\_score()}{63}{subsubsection.4.14.2.8}%
+\contentsline {section}{\numberline {4.15}transition.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{64}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Detailed Description}{65}{subsection.4.15.1}%
+\contentsline {subsection}{\numberline {4.15.2}Function Documentation}{65}{subsection.4.15.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.1}clean()}{65}{subsubsection.4.15.2.1}%
+\contentsline {subsubsection}{\numberline {4.15.2.2}concat\_array\_playername()}{65}{subsubsection.4.15.2.2}%
+\contentsline {subsubsection}{\numberline {4.15.2.3}formatted\_charArray\_to\_uint()}{66}{subsubsection.4.15.2.3}%
+\contentsline {subsubsection}{\numberline {4.15.2.4}handle\_events()}{66}{subsubsection.4.15.2.4}%
+\contentsline {subsubsection}{\numberline {4.15.2.5}init()}{66}{subsubsection.4.15.2.5}%
+\contentsline {subsubsection}{\numberline {4.15.2.6}init\_player()}{67}{subsubsection.4.15.2.6}%
+\contentsline {subsubsection}{\numberline {4.15.2.7}save\_info()}{67}{subsubsection.4.15.2.7}%
+\contentsline {subsubsection}{\numberline {4.15.2.8}save\_score()}{67}{subsubsection.4.15.2.8}%
+\contentsline {chapter}{Index}{69}{section*.24}%

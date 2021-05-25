@@ -1,0 +1,110 @@
+\hypertarget{sdl2-ttf-light_8h}{}\doxysection{sdl2-\/ttf-\/light.h File Reference}
+\label{sdl2-ttf-light_8h}\index{sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}}
+
+
+sur-\/couche de S\+D\+L2\+\_\+ttf pour simplifier son utilisation pour le projet (modifié)  
+
+
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+Include dependency graph for sdl2-\/ttf-\/light.h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sdl2-ttf-light_8h_a1eb77346b2c3ea4968cd58197a05fba0}\label{sdl2-ttf-light_8h_a1eb77346b2c3ea4968cd58197a05fba0}} 
+void \mbox{\hyperlink{sdl2-ttf-light_8h_a1eb77346b2c3ea4968cd58197a05fba0}{init\+\_\+ttf}} ()
+\begin{DoxyCompactList}\small\item\em La fonction initialise l\textquotesingle{}environnement T\+TF. \end{DoxyCompactList}\item 
+T\+T\+F\+\_\+\+Font $\ast$ \mbox{\hyperlink{sdl2-ttf-light_8h_a94b926a8bdae7696004bf8fcebf320b1}{load\+\_\+font}} (const char $\ast$path, int font\+\_\+size)
+\begin{DoxyCompactList}\small\item\em La fonction charge une police. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl2-ttf-light_8h_a1d489fe6c5c770d39e43d5685a3482e5}{apply\+\_\+text}} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y, int w, int h, const char $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font, int red, int green, int blue)
+\begin{DoxyCompactList}\small\item\em La fonction applique un texte dans une certaine police sur le renderer à une certaine position et avec une certaine dimension. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl2-ttf-light_8h_af763a1894238fa2a7f3384461f8e8ded}{clean\+\_\+font}} (T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em La fonction nettoie une police en mémoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+sur-\/couche de S\+D\+L2\+\_\+ttf pour simplifier son utilisation pour le projet (modifié) 
+
+\begin{DoxyAuthor}{Author}
+L\+E\+S\+N\+I\+AK Louis \& S\+L\+I\+M\+A\+NI Kamelia (modification du document de C\+O\+N\+S\+T\+A\+NT Mathieu) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 + extensions 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23 mai 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sdl2-ttf-light_8h_a1d489fe6c5c770d39e43d5685a3482e5}\label{sdl2-ttf-light_8h_a1d489fe6c5c770d39e43d5685a3482e5}} 
+\index{sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}!apply\_text@{apply\_text}}
+\index{apply\_text@{apply\_text}!sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}}
+\doxysubsubsection{\texorpdfstring{apply\_text()}{apply\_text()}}
+{\footnotesize\ttfamily void apply\+\_\+text (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font,  }\item[{int}]{red,  }\item[{int}]{green,  }\item[{int}]{blue }\end{DoxyParamCaption})}
+
+
+
+La fonction applique un texte dans une certaine police sur le renderer à une certaine position et avec une certaine dimension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & le renderer \\
+\hline
+{\em x} & abscisse du coin en haut à gauche du texte \\
+\hline
+{\em y} & son abscisse \\
+\hline
+{\em w} & la largeur du message \\
+\hline
+{\em h} & sa hauteur \\
+\hline
+{\em text} & le texte à afficher \\
+\hline
+{\em font} & la police \\
+\hline
+{\em red} & couleur police \\
+\hline
+{\em green} & couleur police \\
+\hline
+{\em blue} & couleur police \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl2-ttf-light_8h_af763a1894238fa2a7f3384461f8e8ded}\label{sdl2-ttf-light_8h_af763a1894238fa2a7f3384461f8e8ded}} 
+\index{sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}!clean\_font@{clean\_font}}
+\index{clean\_font@{clean\_font}!sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}}
+\doxysubsubsection{\texorpdfstring{clean\_font()}{clean\_font()}}
+{\footnotesize\ttfamily void clean\+\_\+font (\begin{DoxyParamCaption}\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+La fonction nettoie une police en mémoire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & la police \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl2-ttf-light_8h_a94b926a8bdae7696004bf8fcebf320b1}\label{sdl2-ttf-light_8h_a94b926a8bdae7696004bf8fcebf320b1}} 
+\index{sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}!load\_font@{load\_font}}
+\index{load\_font@{load\_font}!sdl2-\/ttf-\/light.h@{sdl2-\/ttf-\/light.h}}
+\doxysubsubsection{\texorpdfstring{load\_font()}{load\_font()}}
+{\footnotesize\ttfamily T\+T\+F\+\_\+\+Font$\ast$ load\+\_\+font (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{int}]{font\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+La fonction charge une police. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & le chemin du fichier correpondant à la police \\
+\hline
+{\em font\+\_\+size} & la taille de la police \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la police chargée 
+\end{DoxyReturn}
