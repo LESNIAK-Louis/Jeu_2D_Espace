@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['main_218',['main',['../main_8c.html#a700a0caa5b70a06d1064e576f9f3cf65',1,'main.c']]],
-  ['menu_5fcredits_219',['menu_credits',['../menu_8c.html#af0118e775427cee297fe678889ab89ae',1,'menu_credits(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game):&#160;menu.c'],['../menu_8h.html#af0118e775427cee297fe678889ab89ae',1,'menu_credits(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game):&#160;menu.c']]],
-  ['menu_5finfos_220',['menu_infos',['../menu_8c.html#a1e77320d4c98678d13e8cf842a68284e',1,'menu_infos(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game):&#160;menu.c'],['../menu_8h.html#a1e77320d4c98678d13e8cf842a68284e',1,'menu_infos(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game):&#160;menu.c']]],
-  ['menu_5fmain_221',['menu_main',['../menu_8c.html#a070fd965a2493e7eeb11bcb8e9413b3c',1,'menu_main(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player):&#160;menu.c'],['../menu_8h.html#a070fd965a2493e7eeb11bcb8e9413b3c',1,'menu_main(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player):&#160;menu.c']]],
-  ['menu_5fshop_222',['menu_shop',['../menu_8c.html#ad6bcd12a4fa2a9423e2ca792b1397704',1,'menu_shop(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player):&#160;menu.c'],['../menu_8h.html#ad6bcd12a4fa2a9423e2ca792b1397704',1,'menu_shop(SDL_Renderer *renderer, world_t *world, resources_t *resources, gameinfo_t *game, playerinfo_t *player):&#160;menu.c']]]
-];
