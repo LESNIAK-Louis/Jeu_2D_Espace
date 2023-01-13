@@ -67,5 +67,5 @@ $t1s : Texture du vaisseau 1 sélectionné
 </br>
 SLIMANI Kamelia (participation mineure)
 </br>
-CONSTANT Mathieu (enseignant ayant fourni les fichiers d'aide à la manipulaiton de SDL2)
+CONSTANT Mathieu (enseignant ayant fourni les fichiers d'aide à la manipulation de SDL2)
 
