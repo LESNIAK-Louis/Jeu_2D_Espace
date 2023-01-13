@@ -43,7 +43,7 @@ Vous pouvez également collecter des pièces sur votre chemin qui vous permettro
 - Flèche de gauche : Déplacement latéral à gauche.
 
 ### LANCER LE TEST
--
+
 - Se rendre dans le dossier contenant les fichiers sources du jeu et renommer `Makefile_tests` en `Makefile`.
 - Ouvrir un terminal à cet emplacement.
 - Entrez la commande `make` pour compiler le programme de tests.
