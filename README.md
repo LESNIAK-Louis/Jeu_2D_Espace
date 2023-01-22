@@ -65,7 +65,7 @@ $t1s : Texture du vaisseau 1 sélectionné
 ## Auteur
 [LESNIAK Louis](https://github.com/LESNIAK-Louis)
 </br>
-SLIMANI Kamelia (participation mineure)
+SLIMANI Kamelia
 </br>
 CONSTANT Mathieu (enseignant ayant fourni les fichiers d'aide à la manipulation de SDL2)
 
